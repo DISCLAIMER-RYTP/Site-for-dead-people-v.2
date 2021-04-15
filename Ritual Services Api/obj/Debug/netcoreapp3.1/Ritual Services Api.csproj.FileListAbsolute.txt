@@ -132,7 +132,6 @@ D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\net
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.csprojAssemblyReference.cache
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.AssemblyInfoInputs.cache
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.AssemblyInfo.cs
 D:\CourseWork_Angular\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.csproj.CoreCompileInputs.cache

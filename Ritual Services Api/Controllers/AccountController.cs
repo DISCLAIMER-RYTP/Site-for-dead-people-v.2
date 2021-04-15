@@ -63,7 +63,7 @@ namespace Ritual_Services_Api.Controllers
                     Image = model.Image
                 };
 
-                var result = _userManager.AddToRoleAsync(user, "Guest").Result;
+                var result = _userManager.AddToRoleAsync(user, "User").Result;
 
                 await ctx.UserAdditionalInfos.AddAsync(ui);
                 await ctx.SaveChangesAsync();

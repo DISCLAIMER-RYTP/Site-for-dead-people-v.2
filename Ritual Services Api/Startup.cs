@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Ritual_Services_Api.Helpers;
 using Ritual_Services_Api.Models.Configuration;
 using Ritual_Services_Api.Models.Entities.Identity;
 using Ritual_Services_Api.Sevices;
@@ -101,8 +102,9 @@ namespace Ritual_Services_Api
             {
                 endpoints.MapControllers();
             });
-        }
 
+            SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
+        }
 
     }
 }

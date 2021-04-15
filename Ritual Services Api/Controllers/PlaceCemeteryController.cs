@@ -93,7 +93,7 @@ namespace Ritual_Services_Api.Controllers
                     _context.SaveChanges();
                     return new ResultDto
                     {
-                        IsSuccessful = false,
+                        IsSuccessful = true,
                         Message = "Successfully added"
                     };
                 }
