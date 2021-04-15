@@ -1,0 +1,5 @@
+C:\Users\Admin\Desktop\Ritual-Services-Api\Ritual Services Api\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Ritual-Services-Api\Ritual Services Api\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Ritual-Services-Api\Ritual Services Api\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Ritual-Services-Api\Ritual Services Api\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Ritual-Services-Api\Ritual Services Api\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.MvcApplicationPartsAssemblyInfo.cache
