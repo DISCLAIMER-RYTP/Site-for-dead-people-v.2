@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ritual_Services_Api.Sevices.Interfaces
 {
-    interface IJwtTokenService
+    public interface IJwtTokenService
     {
         string CreateToken(User user);
     }

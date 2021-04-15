@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Ritual_Services_Api.Models.Dto.ResultDto
 {
-    public class ResultLoginDto
+    public class ResultLoginDto: ResultDto
     {
         public string Token { get; set; }
     }
