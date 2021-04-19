@@ -28,6 +28,7 @@ namespace Ritual_Services_Api.Models.Entities.Identity
         public DbSet<Car> Cars { get; set; }
         public DbSet<Ware> Wares { get; set; }
         public DbSet<PlaceCemetary> PlaceCemetaries { get; set; }
+        public DbSet<Employees> Employees { get; set; }
 
         public DbSet<FuneralOrder> FuneralOrders { get; set; }
 

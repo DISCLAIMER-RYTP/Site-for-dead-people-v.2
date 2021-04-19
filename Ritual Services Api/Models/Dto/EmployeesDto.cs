@@ -9,7 +9,7 @@ namespace Ritual_Services_Api.Models.Dto
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public string Postion { get; set; }
+        public string Position { get; set; }
         public string Phone { get; set; }
         public string Image { get; set; }
         public string Description { get; set; }

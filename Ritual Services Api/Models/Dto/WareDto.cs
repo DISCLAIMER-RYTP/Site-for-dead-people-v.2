@@ -12,5 +12,7 @@ namespace Ritual_Services_Api.Models.Dto
         public string Image { get; set; }
         public int Price { get; set; }
         public string Description { get; set; }
+
+        public string CategoryName { get; set; }
     }
 }
