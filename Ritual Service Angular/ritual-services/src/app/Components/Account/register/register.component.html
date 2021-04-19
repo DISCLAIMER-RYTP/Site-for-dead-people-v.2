@@ -1,0 +1,18 @@
+<div class="mb-3">
+  <label for="c" class="form-label">Id</label>
+  <input [(ngModel)]="register.id" type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Full Name</label>
+  <input [(ngModel)]="register.fullName" type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Email</label>
+  <input [(ngModel)]="register.email"  type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Password</label>
+  <input [(ngModel)]="register.password" type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Age</label>
+  <input [(ngModel)]="register.age" type="number" class="form-control" id="c" >
+  <label for="c" class="form-label">Phone Number</label>
+  <input [(ngModel)]="register.phoneNumber" type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Image</label>
+  <input [(ngModel)]="register.image" type="text" class="form-control" id="c" >
+</div>
+<button type="button" (click)="onRegister()" class="btn btn-outline-dark ml-5 my-2">Register</button>
+<button type="button" [routerLink]="['/']"  class="btn btn-outline-dark ml-5 my-2">Back</button>

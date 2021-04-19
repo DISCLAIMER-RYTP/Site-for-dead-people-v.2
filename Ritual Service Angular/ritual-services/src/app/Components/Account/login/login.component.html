@@ -1,0 +1,10 @@
+<div class="mb-3">
+  <label for="c" class="form-label">Email</label>
+  <input [(ngModel)]="login.email"  type="text" class="form-control" id="c" >
+  <label for="c" class="form-label">Password</label>
+  <input [(ngModel)]="login.password" type="text" class="form-control" id="c" >
+</div>
+<button type="button" (click)="onLogin()" class="btn btn-outline-dark ml-5 my-2">Login</button>
+<button type="button" [routerLink]="['/account']"  class="btn btn-outline-dark ml-5 my-2">Back</button>
+
+
