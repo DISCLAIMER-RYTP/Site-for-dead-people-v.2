@@ -9,6 +9,6 @@ namespace Ritual_Services_Api.Models.Entities
     {
         public int Id { get; set; }
         public string Brand { get; set; }
-        public int Marks { get; set; }
+        public string Marks { get; set; }
     }
 }
