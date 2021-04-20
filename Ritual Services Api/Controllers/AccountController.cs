@@ -34,16 +34,7 @@ namespace Ritual_Services_Api.Controllers
             _jwtTokenService = jwtTokenService;
         }
 
-        [HttpGet]
-        public ResultDto GetProfile()
-        {
-            return new ResultDto
-            {
-                IsSuccessful = true
-            };
-        }
-
-        [HttpPost("Register")]
+        [HttpPost("register")]
         public async Task<ResultDto> Register([FromBody] RegisterDto model)
         {
             try
@@ -75,7 +66,11 @@ namespace Ritual_Services_Api.Controllers
             }
             catch (Exception ex)
             {
-
+                return new ResultDto
+                {
+                    IsSuccessful = false,
+                    Message = ex.Message
+                };
                 throw;
             }
 
@@ -86,6 +81,7 @@ namespace Ritual_Services_Api.Controllers
         public async Task<ResultDto> Login(LoginDto model)
         {
             var res = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
+            var id = ctx.Users.Where(x => x.Email == model.Email).FirstOrDefault();
             if (!res.Succeeded)
                 return new ResultDto
                 {
@@ -98,7 +94,52 @@ namespace Ritual_Services_Api.Controllers
             return new ResultLoginDto
             {
                 IsSuccessful = true,
-                Token = _jwtTokenService.CreateToken(user)
+                Token = _jwtTokenService.CreateToken(user),
+                    Message = id.Id
+            };
+        }
+
+
+        [HttpGet]
+        [Route("{id}")]
+        public ResultDto GetUser([FromRoute] string id)
+        {
+            var user = ctx.Users.Find(id);
+            var userA = ctx.UserAdditionalInfos.Find(id);
+            EditDto res = new EditDto()
+            {
+                Id = userA.Id,
+                FullName = userA.FullName,
+                Age = userA.Age,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Image = userA.Image
+            };
+
+            return new SingleResultDto<EditDto>
+            {
+                IsSuccessful = true,
+                Data = res
+            };
+        }
+
+        [HttpPost("edit")]
+        public ResultDto EditUser(EditDto model)
+        {
+            var user = ctx.Users.Find(model.Id);
+            var userA = ctx.UserAdditionalInfos.Find(model.Id);
+
+            userA.FullName = model.FullName;
+            userA.Age = model.Age;
+            userA.Image = model.Image;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Email = model.Email;
+
+            ctx.SaveChanges();
+
+            return new ResultDto
+            {
+                IsSuccessful = true
             };
         }
 
