@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
+    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
+    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "projectUniqueName": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
         "projectName": "Ritual Services Api",
-        "projectPath": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\Matv_tj8m\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
+        "projectPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "packagesPath": "C:\\Users\\nasar\\.nuget\\packages\\",
+        "outputPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Matv_tj8m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

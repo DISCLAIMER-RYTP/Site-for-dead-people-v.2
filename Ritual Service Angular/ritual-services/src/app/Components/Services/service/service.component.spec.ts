@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { PlaceCemeteryDeleteComponent } from './placeCemetery-delete.component';
+import { ServiceComponent } from './service.component';
 
-describe('PlaceCemeteryDeleteComponent', () => {
-  let component: PlaceCemeteryDeleteComponent;
-  let fixture: ComponentFixture<PlaceCemeteryDeleteComponent>;
+describe('ServiceComponent', () => {
+  let component: ServiceComponent;
+  let fixture: ComponentFixture<ServiceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceCemeteryDeleteComponent ]
+      declarations: [ ServiceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlaceCemeteryDeleteComponent);
+    fixture = TestBed.createComponent(ServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

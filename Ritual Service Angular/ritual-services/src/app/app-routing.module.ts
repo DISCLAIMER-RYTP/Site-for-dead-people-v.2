@@ -6,6 +6,19 @@ import { RegisterComponent } from './Components/Account/register/register.compon
 import { PlaceCemeteryComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery/placeCemetery.component';
 import { AuthGuard } from './Guards/auth.guards';
 import { ProfileEditComponent } from './Components/Profile/profile-edit/profile-edit.component';
+import { ServiceComponent } from './Components/Services/service/service.component';
+import { AfterFuneralServiceComponent } from './Components/Services/afterFuneralService/afterFuneralService.component';
+import { FarewellHallComponent } from './Components/Services/farewellHall/farewellHall.component';
+import { OrganizationMemorialServiceComponent } from './Components/Services/organizationMemorialService/organizationMemorialService.component';
+import { PreparationDeceasedComponent } from './Components/Services/preparationDeceased/preparationDeceased.component';
+import { RentalRitualAccessoriesComponent } from './Components/Services/rentalRitualAccessories/rentalRitualAccessories.component';
+import { RitualAgentComponent } from './Components/Services/ritualAgent/ritualAgent.component';
+import { SupportCrewsComponent } from './Components/Services/supportCrews/supportCrews.component';
+import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
+import { PlaceCemeteryService } from './Service/placeCemetery.service';
+import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-add/placeCemetery-add.component';
+import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
+import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
 
 const routes: Routes = [
   { path: '', component: PlaceCemeteryComponent },
@@ -17,7 +30,38 @@ const routes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
     ]
-  },];
+  },
+  {
+    path: 'servise',
+    children: [
+      { path: '', component: ServiceComponent},
+      { path: 'after-funeral', component: AfterFuneralServiceComponent},
+      { path: 'farewel-hall', component: FarewellHallComponent },
+      { path: 'org-memorial', component: OrganizationMemorialServiceComponent },
+      { path: 'prep-deceased', component: PreparationDeceasedComponent},
+      { path: 'rental-ritual-acces', component: RentalRitualAccessoriesComponent},
+      { path: 'ritual-agent', component: RitualAgentComponent },
+      { path: 'suport-crew', component: SupportCrewsComponent},
+      { path: 'transport-deceased', component: TransportationDeceasedComponent },
+      {path: 'place-cemetery',
+      children: [
+        { path: '', component: PlaceCemeteryService },
+        { path: 'add', component: PlaceCemeteryAddComponent },
+        { path: 'edit', component: PlaceCemeteryUpdateComponent }
+      ]},
+      {path: 'funeral',
+      children: [
+        { path: '', component: FuneralsComponent },
+        { path: 'civil', component: PlaceCemeteryAddComponent },
+        { path: 'elite', component: PlaceCemeteryUpdateComponent },
+        { path: 'jewish', component: PlaceCemeteryAddComponent },
+        { path: 'military', component: PlaceCemeteryUpdateComponent },
+        { path: 'muslim', component: PlaceCemeteryAddComponent },
+        { path: 'orthodox', component: PlaceCemeteryUpdateComponent }
+      ]}
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -15,6 +15,24 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileEditComponent } from './Components/Profile/profile-edit/profile-edit.component';
+import { AfterFuneralServiceComponent } from './Components/Services/afterFuneralService/afterFuneralService.component';
+import { FarewellHallComponent } from './Components/Services/farewellHall/farewellHall.component';
+import { OrganizationMemorialServiceComponent } from './Components/Services/organizationMemorialService/organizationMemorialService.component';
+import { PreparationDeceasedComponent } from './Components/Services/preparationDeceased/preparationDeceased.component';
+import { RentalRitualAccessoriesComponent } from './Components/Services/rentalRitualAccessories/rentalRitualAccessories.component';
+import { RitualAgentComponent } from './Components/Services/ritualAgent/ritualAgent.component';
+import { SupportCrewsComponent } from './Components/Services/supportCrews/supportCrews.component';
+import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-add/placeCemetery-add.component';
+import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
+import { PlaceCemeteryService } from './Service/placeCemetery.service';
+import { CivilFuneralsComponent } from './Components/Services/Funeral/civilFunerals/civilFunerals.component';
+import { EliteFuneralsComponent } from './Components/Services/Funeral/eliteFunerals/eliteFunerals.component';
+import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
+import { JewishFuneralsComponent } from './Components/Services/Funeral/jewishFunerals/jewishFunerals.component';
+import { MilitaryFuneralsComponent } from './Components/Services/Funeral/militaryFunerals/militaryFunerals.component';
+import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFunerals/muslimFunerals.component';
+import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
+import { ServiceComponent } from './Components/Services/service/service.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -29,6 +47,25 @@ const customNotifierOptions: NotifierOptions = {
     NavBarComponent,
     PlaceCemeteryComponent,
     ProfileEditComponent,
+    ServiceComponent,
+    AfterFuneralServiceComponent,
+    FarewellHallComponent,
+    OrganizationMemorialServiceComponent,
+    PreparationDeceasedComponent,
+    RentalRitualAccessoriesComponent,
+    RitualAgentComponent,
+    SupportCrewsComponent,
+    TransformStreamDefaultController,
+    PlaceCemeteryAddComponent,
+    PlaceCemeteryUpdateComponent,
+    PlaceCemeteryService,
+    CivilFuneralsComponent,
+    EliteFuneralsComponent,
+    FuneralsComponent,
+    JewishFuneralsComponent,
+    MilitaryFuneralsComponent,
+    MuslimFuneralsComponent,
+    OrthodoxFuneralsComponent,
   ],
   imports: [
     BrowserModule,
