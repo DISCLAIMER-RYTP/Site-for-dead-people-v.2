@@ -1,0 +1,41 @@
+.div-bar{
+    display: flex;
+}
+
+.btn-shop{
+    background-color: #343a40;
+}
+
+.main-ul{
+    margin-left: -150px;
+}
+
+nav ul {
+    list-style: none;
+    }
+
+nav ul li {
+    display:inline-block;
+    }
+
+nav a {
+    display:block;
+    text-decoration:none;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+nav ul ul li {
+    min-width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
