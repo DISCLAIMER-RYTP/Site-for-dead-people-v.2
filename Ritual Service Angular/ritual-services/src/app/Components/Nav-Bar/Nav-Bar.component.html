@@ -1,14 +1,48 @@
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <div class="navbar" id="navbarSupportedContent" style="display: flex; flex-direction: row; width: 95%;">
-        <div class="mr-5 " style="justify-content: flex-start;">
-        </div>
-        <div>
-          <button type="button" [routerLink]="['/account']"  class="btn btn-outline-light ml-5 my-2">Profile</button>
-            <button type="button" [routerLink]="['/account/register']"  class="btn btn-outline-light ml-5 my-2">Register</button>
-            <button type="button" [routerLink]="['/account/login']"  class="btn btn-outline-light ml-5 my-2">Login</button>
-        </div>
-      </div>
+
+  <nav class="navbar navbar-dark navbar-expand-lg main-nav" style="background-color: #3d3d3d;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Shop
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" [routerLink]="['/ritual-stuff']">Ritual Stuff</a></li>
+          
+            <li><a class="dropdown-item" [routerLink]="['/memorial']">Memorial</a></li>
+          
+            <li><a class="dropdown-item" [routerLink]="['/crosses']">Crosses</a></li>
+          
+            <li><a class="dropdown-item" [routerLink]="['/wreath']">Wreaths</a></li>
+          
+            <li><a class="dropdown-item" [routerLink]="['/urns']">Urns</a></li>
+          
+            <li><a class="dropdown-item" [routerLink]="['/coffins']">Coffins</a></li>
+          </ul>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/funeral-order']">Funeral Order</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/register']">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+        </li>
+        
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
