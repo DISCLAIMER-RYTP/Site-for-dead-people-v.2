@@ -31,7 +31,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'servise',
+    path: 'service',
     children: [
       { path: '', component: ServiceComponent},
       { path: 'after-funeral', component: AfterFuneralServiceComponent},
