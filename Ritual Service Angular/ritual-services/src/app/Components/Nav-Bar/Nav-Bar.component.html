@@ -1,51 +1,14 @@
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-    <div class="navbar" id="navbarSupportedContent" style="display: flex; flex-direction: row; width: 95%;">
-      <div class="mr-5 div-bar" style="justify-content: flex-start;">
-        <button type="button" class="btn btn-outline-light ml-5 my-2" [routerLink]="['/']"
-          routerLinkActive="router-link-active">Home</button>
-        <nav>
-          <ul>
-            <li><button type="button" class="btn btn-outline-light ml-5 my-2">Shop</button>
-              <ul class="main-ul">
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop" [routerLink]="['/book']">Ritual
-                    Stuff</button>
-                </li>
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop"
-                    [routerLink]="['/book']">Memorial</button>
-                </li>
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop"
-                    [routerLink]="['/book']">Crosses</button>
-                </li>
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop"
-                    [routerLink]="['/book']">Wreaths</button>
-                </li>
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop"
-                    [routerLink]="['/book']">Urns</button>
-                </li>
-                <li>
-                  <button type="button" class="btn btn-outline-light ml-5 my-2 btn-shop"
-                    [routerLink]="['/book']">Coffins</button>
-                </li>
-
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <button type="button" class="btn btn-outline-light ml-5 my-2" [routerLink]="['/book']">Help</button>
-      </div>
-      <div>
-        <button type="button" [routerLink]="['/account/profile']"
-          class="btn btn-outline-light ml-5 my-2">Profile</button>
-        <button type="button" [routerLink]="['/account/register']"
-          class="btn btn-outline-light ml-5 my-2">Register</button>
-        <button type="button" [routerLink]="['/account/login']" class="btn btn-outline-light ml-5 my-2">Login</button>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <div class="navbar" id="navbarSupportedContent" style="display: flex; flex-direction: row; width: 95%;">
+        <div class="mr-5 " style="justify-content: flex-start;">
+        </div>
+        <div>
+          <button type="button" [routerLink]="['/account']"  class="btn btn-outline-light ml-5 my-2">Profile</button>
+            <button type="button" [routerLink]="['/account/register']"  class="btn btn-outline-light ml-5 my-2">Register</button>
+            <button type="button" [routerLink]="['/account/login']"  class="btn btn-outline-light ml-5 my-2">Login</button>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
