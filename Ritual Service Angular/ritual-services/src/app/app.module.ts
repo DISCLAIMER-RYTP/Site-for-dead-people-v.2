@@ -34,6 +34,7 @@ import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFun
 import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
 import { ServiceComponent } from './Components/Services/service/service.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -75,7 +76,8 @@ const customNotifierOptions: NotifierOptions = {
     FormsModule,
     NgbModule,
     NgxSpinnerModule,
-    NotifierModule.withConfig(customNotifierOptions)
+    NotifierModule.withConfig(customNotifierOptions),
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
