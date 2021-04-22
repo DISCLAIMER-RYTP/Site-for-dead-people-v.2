@@ -14,11 +14,10 @@ import { PreparationDeceasedComponent } from './Components/Services/preparationD
 import { RentalRitualAccessoriesComponent } from './Components/Services/rentalRitualAccessories/rentalRitualAccessories.component';
 import { RitualAgentComponent } from './Components/Services/ritualAgent/ritualAgent.component';
 import { SupportCrewsComponent } from './Components/Services/supportCrews/supportCrews.component';
-import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
-import { PlaceCemeteryService } from './Service/placeCemetery.service';
 import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-add/placeCemetery-add.component';
 import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
 import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
+import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
 
 const routes: Routes = [
   { path: '', component: PlaceCemeteryComponent },
@@ -42,10 +41,10 @@ const routes: Routes = [
       { path: 'rental-ritual-acces', component: RentalRitualAccessoriesComponent},
       { path: 'ritual-agent', component: RitualAgentComponent },
       { path: 'suport-crew', component: SupportCrewsComponent},
-      { path: 'transport-deceased', component: TransportationDeceasedComponent },
+      { path: 'transport-deceased', component: TransportationDeceasedComponent},
       {path: 'place-cemetery',
       children: [
-        { path: '', component: PlaceCemeteryService },
+        { path: '', component: PlaceCemeteryComponent },
         { path: 'add', component: PlaceCemeteryAddComponent },
         { path: 'edit', component: PlaceCemeteryUpdateComponent }
       ]},

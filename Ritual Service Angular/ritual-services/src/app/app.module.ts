@@ -33,6 +33,7 @@ import { MilitaryFuneralsComponent } from './Components/Services/Funeral/militar
 import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFunerals/muslimFunerals.component';
 import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
 import { ServiceComponent } from './Components/Services/service/service.component';
+import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -55,10 +56,8 @@ const customNotifierOptions: NotifierOptions = {
     RentalRitualAccessoriesComponent,
     RitualAgentComponent,
     SupportCrewsComponent,
-    TransformStreamDefaultController,
     PlaceCemeteryAddComponent,
     PlaceCemeteryUpdateComponent,
-    PlaceCemeteryService,
     CivilFuneralsComponent,
     EliteFuneralsComponent,
     FuneralsComponent,
@@ -66,6 +65,7 @@ const customNotifierOptions: NotifierOptions = {
     MilitaryFuneralsComponent,
     MuslimFuneralsComponent,
     OrthodoxFuneralsComponent,
+    TransportationDeceasedComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +75,6 @@ const customNotifierOptions: NotifierOptions = {
     FormsModule,
     NgbModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule,
     NotifierModule.withConfig(customNotifierOptions)
   ],
   providers: [],
