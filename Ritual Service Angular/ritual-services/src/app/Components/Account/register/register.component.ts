@@ -5,6 +5,7 @@ import { RegisterDto } from 'src/app/Models/registerDto';
 import { AccountService } from 'src/app/Service/account.service';
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,6 +13,8 @@ import { AccountService } from 'src/app/Service/account.service';
  
 })
 export class RegisterComponent implements OnInit {
+
+   
 
   constructor(private accountService: AccountService, private router: Router) { }
 
@@ -38,5 +41,9 @@ export class RegisterComponent implements OnInit {
       }
     })
   }
+
+
+
+ 
 
 }
