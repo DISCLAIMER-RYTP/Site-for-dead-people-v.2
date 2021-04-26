@@ -20,7 +20,7 @@ export class AccountService {
   }
   
   getUser(id: string):  Observable<ApiResponse> {
-    return this.http.get<ApiSingleResponse>('https://localhost:44339/api/account/' + id);
+    return this.http.get<ApiSingleResponse>('https://localhost:44339/api/account/Profile?id=' + id);
   }
 
   editUser(x: EditDto):  Observable<ApiResponse> {

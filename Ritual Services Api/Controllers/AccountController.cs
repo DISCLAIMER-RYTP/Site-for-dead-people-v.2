@@ -34,12 +34,23 @@ namespace Ritual_Services_Api.Controllers
             _jwtTokenService = jwtTokenService;
         }
 
-        [HttpGet]
-        public ResultDto GetProfile()
+        [HttpGet("Profile")]
+        public ResultDto GetUser( string id)
         {
-            return new ResultDto
+
+            var user = ctx.UserAdditionalInfos.Select(c => new UserDto()
             {
-                IsSuccessful = true
+                Id = c.Id,
+                FullName = c.FullName,
+                Phone = c.User.PhoneNumber,
+                Email = c.User.Email,
+                Age = c.Age,
+                Image = c.Image
+            }).FirstOrDefault(u=> u.Id == id);
+            return new SingleResultDto<UserDto>
+            {
+                IsSuccessful = true,
+                Data = user
             };
         }
 
@@ -98,7 +109,8 @@ namespace Ritual_Services_Api.Controllers
             return new ResultLoginDto
             {
                 IsSuccessful = true,
-                Token = _jwtTokenService.CreateToken(user)
+                Token = _jwtTokenService.CreateToken(user),
+                Message = user.Id
             };
         }
 
