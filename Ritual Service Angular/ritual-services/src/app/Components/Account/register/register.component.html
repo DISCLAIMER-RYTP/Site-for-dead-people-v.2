@@ -1,72 +1,11 @@
-<<<<<<< Updated upstream
-<form class="text-center border border-light p-5">
 
-  <p class="h4 mb-4">Sign up</p>
-
-  <div class="form-row mb-4">
-    <div class="col">
-      <!-- First name -->
-      <input [(ngModel)]="register.fullName" type="text" class="form-control" placeholder="Full name">
-    </div>
-  </div>
-
-  <!-- E-mail -->
-  <input type="email" [(ngModel)]="register.email" class="form-control mb-4" placeholder="E-mail">
-
-  <!-- Password -->
-  <input type="text" [(ngModel)]="register.password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-    At least 8 characters and 1 digit
-  </small>
-
-  <!-- Phone number -->
-  <input type="text" [(ngModel)]="register.phoneNumber" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-  <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-    Optional - for two-step authentication
-  </small>
-
-  <!-- Newsletter -->
-  <div class="row">
-    <div class="col-md-6 mx-auto d-flex justify-content-center">
-      <mdb-checkbox [default]="true">Subscribe to our newsletter</mdb-checkbox>
-    </div>
-  </div>
-
-  <!-- Sign up button -->
-  <button (click)="onRegister()" mdbBtn color="info" class="my-4" type="submit">Sign in</button>
-
-  <!-- Social register -->
-  <p>or sign up with:</p>
-
-  <a type="button" class="light-blue-text mx-2">
-    <mdb-icon fab icon="facebook"></mdb-icon>
-  </a>
-  <a type="button" class="light-blue-text mx-2">
-    <mdb-icon fab icon="twitter"></mdb-icon>
-  </a>
-  <a type="button" class="light-blue-text mx-2">
-    <mdb-icon fab icon="linkedin"></mdb-icon>
-  </a>
-  <a type="button" class="light-blue-text mx-2">
-    <mdb-icon fab icon="github"></mdb-icon>
-  </a>
-
-  <hr>
-
-  <!-- Terms of service -->
-  <p>By clicking
-    <em>Sign up</em> you agree to our
-    <a href="" target="_blank">terms of service</a></p>
-
-</form>
-=======
 <!-- Material form register -->
 <div class="reg-form">
   <mdb-card>
 
-    <mdb-card-header class="info-color white-text text-center py-4">
+    <mdb-card-header class=" warning-color white-text text-center py-4">
       <h5>
-        <strong>Sign up</strong>
+        <strong class="txt">Register</strong>
       </h5>
     </mdb-card-header>
   
@@ -125,8 +64,8 @@
         <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
   
         <!-- Sign up button -->
-        <button mdbBtn color="info" [outline]="true" [rounded]="true" [block]="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-          type="submit">Sign in</button>
+        <button mdbBtn color="elegant" [outline]="true" [rounded]="true" [block]="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+          type="submit">Register</button>
   
         <!-- Social register -->
         <p>or sign up with:</p>
