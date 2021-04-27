@@ -35,6 +35,7 @@ import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodo
 import { ServiceComponent } from './Components/Services/service/service.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AboutComponent } from './Components/About/About/About.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -67,6 +68,7 @@ const customNotifierOptions: NotifierOptions = {
     MuslimFuneralsComponent,
     OrthodoxFuneralsComponent,
     TransportationDeceasedComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

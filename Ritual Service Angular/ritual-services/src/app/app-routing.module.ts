@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Components/Account/login/login.component';
 import { ProfileComponent } from './Components/Profile/profile/profile.component';
@@ -18,8 +18,11 @@ import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-c
 import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
 import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
+import { AboutComponent } from './Components/About/About/About.component';
 
 const routes: Routes = [
+  {path:'about',component:AboutComponent},
+  
   { path: '', component: PlaceCemeteryComponent },
   {
     path: 'account',

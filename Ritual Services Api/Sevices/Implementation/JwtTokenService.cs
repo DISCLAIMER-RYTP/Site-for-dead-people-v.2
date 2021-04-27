@@ -32,7 +32,6 @@ namespace Ritual_Services_Api.Sevices
         public string CreateToken(User user)
         {
             var roles = _userManager.GetRolesAsync(user).Result;
-            var fullName = _context.UserAdditionalInfos.FirstOrDefault(t => t.Id == user.Id).FullName;
             var claims = new List<Claim>()
             {
                 //new Claim(JwtRegisteredClaimNames.Sub, user.Id)
