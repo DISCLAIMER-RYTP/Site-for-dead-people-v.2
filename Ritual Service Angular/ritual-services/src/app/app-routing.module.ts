@@ -18,6 +18,12 @@ import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-c
 import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
 import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
+import { RitualStuffComponent } from './Components/Shop/Ritual-Stuff/Ritual-Stuff.component';
+import { CrossesComponent } from './Components/Shop/Crosses/Crosses.component';
+import { CoffinsComponent } from './Components/Shop/Coffins/Coffins.component';
+import { MemorialComponent } from './Components/Shop/Memorial/Memorial.component';
+import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
+import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
 
 const routes: Routes = [
   { path: '', component: PlaceCemeteryComponent },
@@ -57,6 +63,16 @@ const routes: Routes = [
         { path: 'military', component: PlaceCemeteryUpdateComponent },
         { path: 'muslim', component: PlaceCemeteryAddComponent },
         { path: 'orthodox', component: PlaceCemeteryUpdateComponent }
+      ]},
+      {path: 'shop',
+      children: [
+        { path: '', component: LoginComponent },
+        { path: 'ritual-stuff', component: RitualStuffComponent },
+        { path: 'crosses', component: CrossesComponent },
+        { path: 'coffins', component: CoffinsComponent },
+        { path: 'memorial', component: MemorialComponent },
+        { path: 'urns', component: UrnsComponent },
+        { path: 'wreaths', component: WreathsComponent }
       ]}
     ]
   }

@@ -577,3 +577,8 @@ C:\Users\Matv_tj8m\Desktop\Site-for-dead-people-v.2\Ritual Services Api\obj\Debu
 C:\Users\Matv_tj8m\Desktop\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.dll
 C:\Users\Matv_tj8m\Desktop\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.pdb
 C:\Users\Matv_tj8m\Desktop\Site-for-dead-people-v.2\Ritual Services Api\obj\Debug\netcoreapp3.1\Ritual Services Api.genruntimeconfig.cache
+C:\Users\Matv_tj8m\Documents\GitHub\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Matv_tj8m\Documents\GitHub\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Matv_tj8m\Documents\GitHub\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Matv_tj8m\Documents\GitHub\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Matv_tj8m\Documents\GitHub\Site-for-dead-people-v.2\Ritual Services Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
