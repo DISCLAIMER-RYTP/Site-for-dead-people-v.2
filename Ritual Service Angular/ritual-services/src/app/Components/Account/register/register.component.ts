@@ -4,12 +4,17 @@ import { ApiResponse } from 'src/app/Models/apiResponse';
 import { RegisterDto } from 'src/app/Models/registerDto';
 import { AccountService } from 'src/app/Service/account.service';
 
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+ 
 })
 export class RegisterComponent implements OnInit {
+
+   
 
   constructor(private accountService: AccountService, private router: Router) { }
 
@@ -26,6 +31,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+
   onRegister()
   {
     this.accountService.register(this.register).subscribe((res: ApiResponse) =>{
@@ -35,5 +41,9 @@ export class RegisterComponent implements OnInit {
       }
     })
   }
+
+
+
+ 
 
 }

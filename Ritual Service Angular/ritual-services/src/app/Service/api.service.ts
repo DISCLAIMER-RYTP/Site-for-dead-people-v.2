@@ -12,7 +12,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   loginStatus = new EventEmitter<boolean>();
-  baseUrl = '/api/Account';
+  baseUrl = 'https://localhost:44339/api';
   
     isLoggedIn()
     {
@@ -40,9 +40,13 @@ export class ApiService {
     SingUp(UserLoginDto: RegisterDto): Observable<ApiResponse>{
       return this.http.post<ApiResponse>(this.baseUrl + '/register', UserLoginDto)
     }
-  
-    Logout(){
+    logout(){
       this.loginStatus.emit(false);
       localStorage.removeItem('token');
     }
+  
+    uploadPhoto(id: number, form: FormData): Observable<ApiResponse>{
+        return this.http.post<ApiResponse>(this.baseUrl +'/upload/'+id, form);
+    }  
+  
 }

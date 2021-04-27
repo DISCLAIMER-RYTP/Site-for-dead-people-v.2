@@ -1,18 +1,108 @@
-<div class="mb-3">
-  <label for="c" class="form-label">Id</label>
-  <input [(ngModel)]="register.id" type="text" class="form-control" id="c" >
-  <label for="c" class="form-label">Full Name</label>
-  <input [(ngModel)]="register.fullName" type="text" class="form-control" id="c" >
-  <label for="c" class="form-label">Email</label>
-  <input [(ngModel)]="register.email"  type="text" class="form-control" id="c" >
-  <label for="c" class="form-label">Password</label>
-  <input [(ngModel)]="register.password" type="text" class="form-control" id="c" >
-  <label for="c" class="form-label">Age</label>
-  <input [(ngModel)]="register.age" type="number" class="form-control" id="c" >
-  <label for="c" class="form-label">Phone Number</label>
-  <input [(ngModel)]="register.phoneNumber" type="text" class="form-control" id="c" >
-  <label for="c" class="form-label">Image</label>
-  <input [(ngModel)]="register.image" type="text" class="form-control" id="c" >
+<!-- Material form register -->
+>
+<div class="reg-form body-">
+    <mdb-card>
+
+        <mdb-card-header class=" warning-color darck-text text-center py-4">
+            <h5>
+                <strong class="txt">Register</strong>
+            </h5>
+        </mdb-card-header>
+
+        <!--Card content-->
+        <mdb-card-body class="px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;">
+
+                <div class="form-row">
+                    <div class="col">
+                        <!-- First name -->
+                        <div class="md-form">
+                            <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput>
+                            <label for="materialRegisterFormFirstName">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <div class="md-form">
+                            <input type="number" id="materialRegisterFormLastName" class="form-control" mdbInput>
+                            <label for="materialRegisterFormLastName">Age</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="md-form mt-0">
+                    <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
+                    <label for="materialRegisterFormEmail">E-mail</label>
+                </div>
+
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" mdbInput>
+                    <label for="materialRegisterFormPassword">Password</label>
+                    <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+            At least 8 characters and 1 digit
+          </small>
+                </div>
+
+                <!-- Phone number -->
+                <div class="md-form">
+                    <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
+                    <label for="materialRegisterFormPhone">Phone number</label>
+                    <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+            Optional - for two-step authentication
+          </small>
+                </div>
+                <div class="md-form">
+                    <button type="button" class="btn btn-warning btn-rounded">
+                    <i class="fas fa-download"></i>
+                    </button>
+                    <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+          Upload photo
+        </small>
+                </div>
+
+
+
+
+
+
+                <!-- Newsletter -->
+                <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
+
+                <!-- Sign up button -->
+                <button mdbBtn color="elegant" [outline]="true " [rounded]="true " [block]="true " class="my-4 waves-effect z-depth-0 " mdbWavesEffect type="submit ">Register</button>
+
+                <!-- Social register -->
+                <p>or sign up with:</p>
+
+                <a type="button " class="light-blue-text mx-2 ">
+                    <mdb-icon fab icon="facebook "></mdb-icon>
+                </a>
+                <a type="button " class="light-blue-text mx-2 ">
+                    <mdb-icon fab icon="twitter "></mdb-icon>
+                </a>
+                <a type="button " class="light-blue-text mx-2 ">
+                    <mdb-icon fab icon="linkedin "></mdb-icon>
+                </a>
+                <a type="button " class="light-blue-text mx-2 ">
+                    <mdb-icon fab icon="heart "></mdb-icon>
+                </a>
+
+                <hr>
+
+                <!-- Terms of service -->
+                <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href=" " target="_blank ">terms of service</a>. </p>
+
+            </form>
+            <!-- Form -->
+
+        </mdb-card-body>
+
+    </mdb-card>
+    <!-- Material form register -->
 </div>
-<button type="button" (click)="onRegister()" class="btn btn-outline-dark ml-5 my-2">Register</button>
-<button type="button" [routerLink]="['/']"  class="btn btn-outline-dark ml-5 my-2">Back</button>
