@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Ritual_Services_Api.Models.Dto;
 using Ritual_Services_Api.Models.Dto.ResultDto;
 using Ritual_Services_Api.Models.Entities.Identity;
@@ -112,6 +113,37 @@ namespace Ritual_Services_Api.Controllers
                 Token = _jwtTokenService.CreateToken(user),
                 Message = user.Id
             };
+        }
+
+        [HttpPost]
+        [Route("Edit")]
+        public ResultDto EditProfile([FromBody] UserDto dto)
+        {
+            try
+            {
+                var f = ctx.UserAdditionalInfos.Include(x=>x.User).First(x => x.Id == dto.Id);
+
+                f.FullName = dto.FullName;
+                f.Age = dto.Age;
+                f.User.Email = dto.Email;
+                f.User.PhoneNumber = dto.Phone;
+                f.Image = dto.Image;
+                ctx.SaveChanges();
+                return new ResultDto
+                {
+                    IsSuccessful = true,
+                    Message = "Successfully created"
+                };
+            }
+            catch (Exception)
+            {
+                return new ResultDto
+                {
+                    IsSuccessful = false,
+                    Message = "Something goes wrong!"
+                };
+                throw;
+            }
         }
 
     }

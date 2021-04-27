@@ -11,6 +11,6 @@ export class EditDto {
     fullName!: string;
     image!: string;
     age!: number;
-    phoneNumber!: string;
+    phone!: string;
     email!: string;
 }   
