@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Components/Account/login/login.component';
 import { ProfileComponent } from './Components/Profile/profile/profile.component';
@@ -18,11 +18,15 @@ import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-c
 import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
 import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
-import { AboutComponent } from './Components/About/About/About.component';
+import { RitualStuffComponent } from './Components/Shop/Ritual-Stuff/Ritual-Stuff.component';
+import { CrossesComponent } from './Components/Shop/Crosses/Crosses.component';
+import { CoffinsComponent } from './Components/Shop/Coffins/Coffins.component';
+import { MemorialComponent } from './Components/Shop/Memorial/Memorial.component';
+import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
+import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
+import { ShopComponent } from './Components/Shop/Shop/Shop.component';
 
 const routes: Routes = [
-  {path:'about',component:AboutComponent},
-  
   { path: '', component: PlaceCemeteryComponent },
   {
     path: 'account',
@@ -60,6 +64,16 @@ const routes: Routes = [
         { path: 'military', component: PlaceCemeteryUpdateComponent },
         { path: 'muslim', component: PlaceCemeteryAddComponent },
         { path: 'orthodox', component: PlaceCemeteryUpdateComponent }
+      ]},
+      {path: 'shop',
+      children: [
+        { path: '', component: ShopComponent },
+        { path: 'ritual-stuff', component: RitualStuffComponent },
+        { path: 'crosses', component: CrossesComponent },
+        { path: 'coffins', component: CoffinsComponent },
+        { path: 'memorial', component: MemorialComponent },
+        { path: 'urns', component: UrnsComponent },
+        { path: 'wreaths', component: WreathsComponent }
       ]}
     ]
   }
