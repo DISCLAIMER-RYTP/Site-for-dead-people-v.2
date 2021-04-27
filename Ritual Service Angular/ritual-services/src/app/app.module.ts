@@ -35,6 +35,13 @@ import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodo
 import { ServiceComponent } from './Components/Services/service/service.component';
 import { TransportationDeceasedComponent } from './Components/Services/transportationDeceased/transportationDeceased.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CoffinsComponent } from './Components/Shop/Coffins/Coffins.component';
+import { CrossesComponent } from './Components/Shop/Crosses/Crosses.component';
+import { MemorialComponent } from './Components/Shop/Memorial/Memorial.component';
+import { RitualStuffComponent } from './Components/Shop/Ritual-Stuff/Ritual-Stuff.component';
+import { ShopComponent } from './Components/Shop/Shop/Shop.component';
+import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
+import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -67,6 +74,13 @@ const customNotifierOptions: NotifierOptions = {
     MuslimFuneralsComponent,
     OrthodoxFuneralsComponent,
     TransportationDeceasedComponent,
+    CoffinsComponent,
+    CrossesComponent,
+    MemorialComponent,
+    RitualStuffComponent,
+    ShopComponent,
+    UrnsComponent,
+    WreathsComponent,
   ],
   imports: [
     BrowserModule,
