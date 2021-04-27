@@ -21,12 +21,12 @@
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           Shop<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Ritula Stuff</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Memorial</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Crosses</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Wreaths</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Urns</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Coffins</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/ritual-stuff']">Ritula Stuff</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/memorial']">Memorial</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/crosses']">Crosses</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/wreaths']">Wreaths</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/urns']">Urns</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/coffins']">Coffins</a>
          
         </div>
       </li>

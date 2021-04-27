@@ -24,6 +24,7 @@ import { CoffinsComponent } from './Components/Shop/Coffins/Coffins.component';
 import { MemorialComponent } from './Components/Shop/Memorial/Memorial.component';
 import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
 import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
+import { ShopComponent } from './Components/Shop/Shop/Shop.component';
 
 const routes: Routes = [
   { path: '', component: PlaceCemeteryComponent },
@@ -66,7 +67,7 @@ const routes: Routes = [
       ]},
       {path: 'shop',
       children: [
-        { path: '', component: LoginComponent },
+        { path: '', component: ShopComponent },
         { path: 'ritual-stuff', component: RitualStuffComponent },
         { path: 'crosses', component: CrossesComponent },
         { path: 'coffins', component: CoffinsComponent },
