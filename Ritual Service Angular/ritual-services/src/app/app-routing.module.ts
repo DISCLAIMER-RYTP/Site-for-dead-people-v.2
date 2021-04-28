@@ -25,8 +25,12 @@ import { MemorialComponent } from './Components/Shop/Memorial/Memorial.component
 import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
 import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
 import { ShopComponent } from './Components/Shop/Shop/Shop.component';
+import { AboutComponent } from './Components/About/About/About.component';
+import { ContactComponent } from './Components/Contact/contact/contact.component';
 
 const routes: Routes = [
+  {path:'about',component:AboutComponent},
+  {path:'contact',component:ContactComponent},
   { path: '', component: PlaceCemeteryComponent },
   {
     path: 'account',

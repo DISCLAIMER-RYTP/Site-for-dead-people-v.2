@@ -42,6 +42,8 @@ import { RitualStuffComponent } from './Components/Shop/Ritual-Stuff/Ritual-Stuf
 import { ShopComponent } from './Components/Shop/Shop/Shop.component';
 import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
 import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
+import { AboutComponent } from './Components/About/About/About.component';
+import { ContactComponent } from './Components/Contact/contact/contact.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -81,6 +83,8 @@ const customNotifierOptions: NotifierOptions = {
     ShopComponent,
     UrnsComponent,
     WreathsComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

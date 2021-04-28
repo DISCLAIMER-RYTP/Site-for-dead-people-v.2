@@ -1,38 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
+    "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
+    "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "projectUniqueName": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
         "projectName": "Ritual Services Api",
-        "projectPath": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\Matv_tj8m\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
-=======
-    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
-  },
-  "projects": {
-    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "projectName": "Ritual Services Api",
-        "projectPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\nasar\\.nuget\\packages\\",
-        "outputPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
->>>>>>> Stashed changes
+        "projectPath": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\Matv_tj8m\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\nasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -55,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -89,6 +76,10 @@
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.11.0, )"
             }
           },
           "imports": [
@@ -109,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
