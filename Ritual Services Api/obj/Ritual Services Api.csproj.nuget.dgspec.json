@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git-Progect\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
+    "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
   },
   "projects": {
-    "D:\\Git-Progect\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
+    "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git-Progect\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "projectUniqueName": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
         "projectName": "Ritual Services Api",
-        "projectPath": "D:\\Git-Progect\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Git-Progect\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
+        "projectPath": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "D:\\ddd\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

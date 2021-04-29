@@ -10,33 +10,33 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link waves-light " mdbWavesEffect>Home</a>
+        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" mdbWavesEffect>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" [routerLink]="['/service/after-funeral']" mdbWavesEffect>After Funeral</a>
+        <a class="nav-link waves-light" [routerLink]="['/service/after-funeral']" style="color: rgb(202, 147, 44);" mdbWavesEffect>After Funeral</a>
       </li>
 
       <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+      <li class="nav-item dropdown"  dropdown>
+        <a  dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
           Shop<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/ritual-stuff']">Ritula Stuff</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/memorial']">Memorial</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/crosses']">Crosses</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/wreaths']">Wreaths</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/urns']">Urns</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/shop/coffins']">Coffins</a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/ritual-stuff']">Ritula Stuff</a>
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/memorial']">Memorial</a>
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/crosses']">Crosses</a>
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/wreaths']">Wreaths</a>
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/urns']">Urns</a>
+          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/coffins']">Coffins</a>
          
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link waves-light " [routerLink]="['/about']"  mdbWavesEffect>About</a>
+        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/about']"  mdbWavesEffect>About</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link waves-light " [routerLink]="['/contact']"  mdbWavesEffect>Contact</a>
+        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/contact']"  mdbWavesEffect>Contact</a>
       </li>
 
     </ul>
@@ -44,25 +44,25 @@
 
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="twitter"></mdb-icon>
+        <a  class="nav-link">
+          <mdb-icon style="color: rgb(202, 147, 44);" fab icon="twitter"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link">
-          <mdb-icon fab icon="google-plus"></mdb-icon>
+          <mdb-icon style="color: rgb(202, 147, 44);" fab icon="google-plus"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link">
           <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-              <a class="dropdown-item" [routerLink]="['/account']">Profile</a>
-              <a class="dropdown-item" [routerLink]="['/account/login']">Login</a>
-              <a class="dropdown-item" [routerLink]="['/account/register']">Register</a>
+            <mdb-icon fas icon="user" style="color: rgb(202, 147, 44);" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary elegant-color            ">
+              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);"  [routerLink]="['/account']">Profile</a>
+              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/login']">Login</a>
+              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/register']">Register</a>
               <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+              <!--<a class="dropdown-item" href="#">Separated link</a>-->
             </div>
           </div>
         </a>
