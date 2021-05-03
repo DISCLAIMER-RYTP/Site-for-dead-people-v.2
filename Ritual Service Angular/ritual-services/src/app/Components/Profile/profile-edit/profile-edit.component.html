@@ -1,66 +1,68 @@
-<div class="log-form">
-  <mdb-card>
-
-    <mdb-card-header class="warning-color black-text text-center py-4">
-      <h5>
-        <strong class="txt">Edit Profile</strong>
-      </h5>
-    </mdb-card-header>
-
-    <mdb-card-body class=" px-lg-5 pt-0">
-
-      <form class="text-center" style="color: #212121; display: flex;">
-
-        <div class="md-form">
-          <img src="https://localhost:44339/Images/maryna.png" width="100%" />
-        </div>
-
-        <div class="ml-5">
-          <div class="form-row">
-            <div class="col">
-              <div class="md-form">
-                <input [(ngModel)]="prop.fullName" name="fullName" type="text" id="materialRegisterFormFirstName" class="form-control"
-                  mdbInput >
-                <label for="materialRegisterFormFirstName">Full Name</label>
-              </div>
-            </div>
-            <div class="col">
-              <div class="md-form">
-                <input type="number" name="age" [(ngModel)]="prop.age" id="materialRegisterFormLastName"
-                  class="form-control" mdbInput>
-                <label for="materialRegisterFormLastName">Age</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="md-form mt-0">
-            <input type="email" name="email" [(ngModel)]="prop.email" id="materialRegisterFormEmail"
-              class="form-control" mdbInput>
-            <label for="materialRegisterFormEmail">E-mail</label>
-          </div>
-
+<div class="body">
+  <div class="log-form">
+    <mdb-card>
+  
+      <mdb-card-header class="warning-color black-text text-center py-4">
+        <h5>
+          <strong class="txt">Edit Profile</strong>
+        </h5>
+      </mdb-card-header>
+  
+      <mdb-card-body class=" px-lg-5 pt-0 div-prof">
+  
+        <form class="text-center" style="color: #212121; display: flex;">
+  
           <div class="md-form">
-            <input type="text" name="phone" [(ngModel)]="prop.phone" id="materialRegisterFormPhone"
-              class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
-            <label for="materialRegisterFormPhone">Phone number</label>
-            <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-              Optional - for two-step authentication
-            </small>
+            <img src="https://localhost:44339/Images/maryna.png" width="100%" />
           </div>
-
-          <button (click)="Edit()" mdbBtn color="elegant" [outline]="true" [rounded]="true"
-            class="my-4 waves-effect z-depth-0" mdbWavesEffect type="submit">Save Change</button>
-
-          <div class="container signin">
-            <p>All right? <span (click)="Back()">Back</span>.</p>
+  
+          <div class="ml-5">
+            <div class="form-row">
+              <div class="col">
+                <div class="md-form">
+                  <input [(ngModel)]="prop.fullName" name="fullName" type="text" id="materialRegisterFormFirstName" class="form-control"
+                    mdbInput >
+                  <label for="materialRegisterFormFirstName">Full Name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="md-form">
+                  <input type="number" name="age" [(ngModel)]="prop.age" id="materialRegisterFormLastName"
+                    class="form-control" mdbInput>
+                  <label for="materialRegisterFormLastName">Age</label>
+                </div>
+              </div>
+            </div>
+  
+            <div class="md-form mt-0">
+              <input type="email" name="email" [(ngModel)]="prop.email" id="materialRegisterFormEmail"
+                class="form-control" mdbInput>
+              <label for="materialRegisterFormEmail">E-mail</label>
+            </div>
+  
+            <div class="md-form">
+              <input type="text" name="phone" [(ngModel)]="prop.phone" id="materialRegisterFormPhone"
+                class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
+              <label for="materialRegisterFormPhone">Phone number</label>
+              <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                Optional - for two-step authentication
+              </small>
+            </div>
+  
+            <button (click)="Edit()" mdbBtn color="elegant" [outline]="true" [rounded]="true"
+              class="my-4 waves-effect z-depth-0 btn btn-outline-light btn-rounded" mdbWavesEffect type="submit">Save Change</button>
+  
+            <div class="container signin">
+              <p style="color: whitesmoke;">All right? <span (click)="Back()">Back</span>.</p>
+            </div>
           </div>
-        </div>
-
-      </form>
-
-    </mdb-card-body>
-
-  </mdb-card>
-
-
+  
+        </form>
+  
+      </mdb-card-body>
+  
+    </mdb-card>
+  
+  
+  </div>
 </div>
