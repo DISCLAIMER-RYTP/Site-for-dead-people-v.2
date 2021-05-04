@@ -1,0 +1,139 @@
+
+.funeral a {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    color: #503b30!important;
+    font-size: 16px!important;
+}
+.funeral p:before {
+    position: absolute;
+    top: 0px;
+    border-radius: 50%;
+    background: #481401;
+    width: 74px;
+    height: 74px;
+    margin-top: -7px;
+    padding: 8px 9px 9px 9px;
+    box-shadow: 2px 2px 10px #310e00;
+}
+.funeral p {
+    margin-bottom: 30px!important;
+    margin-right: 15px!important;
+    margin-left: 15px!important;
+}
+
+
+.funeral_1:before {
+    content: url(../../../../../assets/Image/tools/person.png);
+}
+.funeral_2:before {
+    content: url(../../../../../assets/Image/tools/military.png);
+}
+.funeral_3:before {
+    content: url(../../../../../assets/Image/tools/elit.png);
+}
+.funeral_4:before {
+    content: url(../../../../../assets/Image/tools/pravoslav.png);
+}
+.funeral_5:before {
+    content: url(../../../../../assets/Image/tools/musulmans.png);
+}
+.funeral_6:before {
+    content: url(../../../../../assets/Image/tools/iud.png);
+}
+
+.back{
+    background-image: url(../../../../../assets/Image/00.jpg);
+}
+
+
+.ritual-block.clearfix.wbg {
+    background-color: rgb(202, 147, 44);
+    margin: 0;
+    border-top: 12px solid #e2ceb1;    
+    box-shadow: 0 0 50px black inset;
+}
+.ritual-block.clearfix.advantages p, .funeral p {
+	margin: 10px 5px;
+    background: rgba(255,255,255,0.75);
+    padding: 12px 0;
+    color: #310f01;
+    font-weight: bold;
+    border-radius: 30px 0 0 30px;
+    border-right: 6px solid #481502;
+}
+.ritual-block.clearfix.advantages b {
+	background: #3a1c03;
+    color: #fff;
+    padding: 15px 22px;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 20px;
+    box-shadow: 3px 3px 10px #360f00;
+}
+
+.ritual-block.clearfix.advantages p {
+    font-size: 16px;
+}
+.ritual-block.clearfix.advantages {
+	background: url(../../../../../assets/Image/00.jpg);
+    padding: 65px 0;
+    box-shadow: 0 0 50px black inset;
+    margin: 0;
+  	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ritual-block.clearfix.wbg img {
+    float: left;
+    width: 270px;
+}
+.ritual-block.clearfix.wbg div.ritual-blockcontent {
+    width: 1140px;
+    margin: 80px auto 70px auto;
+}
+.ritual-blockcontent
+{
+  padding: 5px;
+  margin: 0 auto;
+  color: #503b30;
+  font-size: 13px;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  line-height: 175%;
+}
+
+.ritual-blockcontent table, .ritual-blockcontent li, .ritual-blockcontent a, .ritual-blockcontent a:link, .ritual-blockcontent a:visited, .ritual-blockcontent a:hover
+{
+  color: #303F50;
+  font-size: 13px;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  line-height: 175%;
+}
+
+.ritual-blockcontent p
+{
+  margin: 10px 5px;
+}
+
+.ritual-blockcontent a, .ritual-blockcontent a:link
+{
+  color: #C9A87C;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+}
+
+.ritual-blockcontent a:visited, .ritual-blockcontent a.visited
+{
+  color: #A9BACB;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  text-decoration: none;
+}
+
+.ritual-blockcontent a:hover, .ritual-blockcontent a.hover
+{
+  color: #B5874A;
+  font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  text-decoration: none;
+}
+

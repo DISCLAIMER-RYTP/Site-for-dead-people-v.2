@@ -3,6 +3,17 @@
     height: 100%;
 }
 
+.body{
+    color: rgb(202, 147, 44);
+    background-image: url("../../../../assets/Image/00.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
 .min-img{
     height: 30%;
     float: left;

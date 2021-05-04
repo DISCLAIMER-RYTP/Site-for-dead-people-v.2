@@ -27,8 +27,16 @@ import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
 import { ShopComponent } from './Components/Shop/Shop/Shop.component';
 import { AboutComponent } from './Components/About/About/About.component';
 import { ContactComponent } from './Components/Contact/contact/contact.component';
+import { HomeComponent } from './Components/home/home.component';
+import { CivilFuneralsComponent } from './Components/Services/Funeral/civilFunerals/civilFunerals.component';
+import { EliteFuneralsComponent } from './Components/Services/Funeral/eliteFunerals/eliteFunerals.component';
+import { JewishFuneralsComponent } from './Components/Services/Funeral/jewishFunerals/jewishFunerals.component';
+import { MilitaryFuneralsComponent } from './Components/Services/Funeral/militaryFunerals/militaryFunerals.component';
+import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFunerals/muslimFunerals.component';
+import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   { path: '', component: PlaceCemeteryComponent },
@@ -62,12 +70,12 @@ const routes: Routes = [
       {path: 'funeral',
       children: [
         { path: '', component: FuneralsComponent },
-        { path: 'civil', component: PlaceCemeteryAddComponent },
-        { path: 'elite', component: PlaceCemeteryUpdateComponent },
-        { path: 'jewish', component: PlaceCemeteryAddComponent },
-        { path: 'military', component: PlaceCemeteryUpdateComponent },
-        { path: 'muslim', component: PlaceCemeteryAddComponent },
-        { path: 'orthodox', component: PlaceCemeteryUpdateComponent }
+        { path: 'civil', component: CivilFuneralsComponent },
+        { path: 'elite', component: EliteFuneralsComponent },
+        { path: 'jewish', component: JewishFuneralsComponent },
+        { path: 'military', component: MilitaryFuneralsComponent },
+        { path: 'muslim', component: MuslimFuneralsComponent },
+        { path: 'orthodox', component: OrthodoxFuneralsComponent }
       ]},
       {path: 'shop',
       children: [
