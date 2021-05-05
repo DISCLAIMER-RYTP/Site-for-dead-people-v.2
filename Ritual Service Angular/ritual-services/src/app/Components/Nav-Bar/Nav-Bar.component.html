@@ -1,89 +1,98 @@
 <!--Navbar-->
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark elegant-color" [containerInside]="false">
 
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">Name Site</a></mdb-navbar-brand>
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Name Site</a></mdb-navbar-brand>
 
-  <!-- Collapsible content -->
-  <links class="nav-bar">
+    <!-- Collapsible content -->
+    <links class="nav-bar">
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['']" mdbWavesEffect>Home</a>
-      </li>
-      <li class="nav-item dropdown"  dropdown>
-        <a  dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
-          Services</a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/after-funeral']">After Funeral Service</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/farewel-hall']">Farewell Hall</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/org-memorial']">Organization Memorial Service</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/place-cemetery']">Place Cemetery</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/prep-deceased']">Preparation Deceased</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/rental-ritual-acces']">Rental Ritual Stuff</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/ritual-agent']">Ritual Agent</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/suport-crew']">Support Crews</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/transport-deceased']">Transportation Deceased</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/funeral']">Funeral</a>
-         
-        </div>
-      </li>
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['']" mdbWavesEffect>
+                    <mdb-icon fas icon="home"></mdb-icon>
+                    Home</a>
+            </li>
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
+                    <mdb-icon fas icon="x-ray"></mdb-icon>
+                    Services</a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/after-funeral']">After Funeral Service</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/farewel-hall']">Farewell Hall</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/org-memorial']">Organization Memorial Service</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/place-cemetery']">Place Cemetery</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/prep-deceased']">Preparation Deceased</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/rental-ritual-acces']">Rental Ritual Stuff</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/ritual-agent']">Ritual Agent</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/suport-crew']">Support Crews</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/transport-deceased']">Transportation Deceased</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/service/funeral']">Funeral</a>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown"  dropdown>
-        <a  dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
-          Shop<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/ritual-stuff']">Ritula Stuff</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/memorial']">Memorial</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/crosses']">Crosses</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/wreaths']">Wreaths</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/urns']">Urns</a>
-          <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/coffins']">Coffins</a>
-         
-        </div>
-      </li>
+                </div>
+            </li>
 
-      <li class="nav-item">
-        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/about']"  mdbWavesEffect>About</a>
-      </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
+                    <mdb-icon fas icon="shopping-cart"></mdb-icon>
+                    Shop<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/ritual-stuff']">Ritula Stuff</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/memorial']">Memorial</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/crosses']">Crosses</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/wreaths']">Wreaths</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/urns']">Urns</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/shop/coffins']">Coffins</a>
 
-      <li class="nav-item">
-        <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/contact']"  mdbWavesEffect>Contact</a>
-      </li>
+                </div>
+            </li>
 
-    </ul>
-    <!-- Links -->
+            <li class="nav-item">
+                <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/about']" mdbWavesEffect>
+                    <mdb-icon fab icon="app-store"></mdb-icon>About</a>
+            </li>
 
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item">
-        <a  class="nav-link">
-          <mdb-icon style="color: rgb(202, 147, 44);" fab icon="twitter"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon style="color: rgb(202, 147, 44);" fab icon="google-plus"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" style="color: rgb(202, 147, 44);" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary elegant-color            ">
-              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);"  [routerLink]="['/account']">Profile</a>
-              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/login']">Login</a>
-              <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/register']">Register</a>
-              <div class="divider dropdown-divider"></div>
-              <!--<a class="dropdown-item" href="#">Separated link</a>-->
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </links>
-  <!-- Collapsible content -->
+            <li class="nav-item">
+                <a class="nav-link waves-light " style="color: rgb(202, 147, 44);" [routerLink]="['/contact']" mdbWavesEffect>
+                    <mdb-icon fas icon="address-card"></mdb-icon>
+                    Contact</a>
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mdb-icon style="color: rgb(202, 147, 44);" fab icon="twitter"></mdb-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mdb-icon style="color: rgb(202, 147, 44);" fab icon="google-plus"></mdb-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <div class="btn-group" mdbDropdown>
+                        <mdb-icon fas icon="user" style="color: rgb(202, 147, 44);" mdbDropdownToggle></mdb-icon>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-primary elegant-color            ">
+                            <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account']">
+                                <mdb-icon fas icon="user"></mdb-icon>Profile</a>
+                            <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/login']">
+                                <mdb-icon fas icon="sign-in-alt"></mdb-icon>Login</a>
+                            <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account/register']">
+                                <mdb-icon fas icon="registered"></mdb-icon>Register</a>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </links>
+    <!-- Collapsible content -->
 
 </mdb-navbar>
 <!--/.Navbar-->

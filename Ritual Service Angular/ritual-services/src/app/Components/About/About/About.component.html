@@ -1,19 +1,17 @@
 <div style="background-color:#2E2E2E; width: 100%; ">
     <div class="bag1">
         <div class="view overlay zoom">
-            <img  src="../../../../assets/Image/0341cf2ee5cac2ad817548ac2a6d2a01.jpg" width="100%" class="img-fluid " alt="zoom">
+            <img src="../../../../assets/Image/0341cf2ee5cac2ad817548ac2a6d2a01.jpg" width="100%" class="img-fluid " alt="zoom">
             <div class="mask flex-center waves-effect waves-light">
                 <p class="white-text" style="font-family:cursive; font-size: 50px;">About Ritual Srevice</p>
             </div>
         </div>
     </div>
-
-
-
+    <audio src="../../../../assets/musik/warf.mp3" autoplay="autoplay"></audio>
     <div class=" d-flex row" style="width: 80%;">
 
         <div class=" view col-3 " style="margin:3% ; ">
-            <img  src="../../../../assets/Image/bg2.jpg " class="img-fluid " alt="placeholder ">
+            <img src="../../../../assets/Image/bg2.jpg " class="img-fluid " alt="placeholder ">
             <div class="mask flex-center waves-effect waves-light rgba-teal-super-light ">
             </div>
         </div>
@@ -40,121 +38,114 @@
             </p>
 
         </div>
-        
+
         <div class="cards">
-            <div class="row row-cols-1 row-cols-md-2">
+            <div class="row row-cols-2 row-cols-md-2">
                 <div class="col mb-4">
-                  <!-- Card -->
-                  <div class="card" style="background-color:  rgb(202, 147, 44);">
-              
-                    <!--Card image-->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="../../../../assets/Image/rip-skull-illustration-j9.jpg"
-                        alt="Card image cap">
-                      
+                    <!-- Card -->
+                    <div class="card card-style">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="../../../../assets/Image/about-images/fureval-hall.jpg" alt="Card image cap">
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Farevall Hall</h4>
+                            <!--Text-->
+                            <p class="card-text">In Fureval Hall you can choose the hall where the funeral will be held.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button class="btn-h" [routerLink]="['/service/farewel-hall']" mdbBtn type="button" mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
+
+
+
+                        </div>
+
                     </div>
-              
-                    <!--Card content-->
-                    <div class="card-body">
-              
-                      <!--Title-->
-                      <h4 class="card-title">Card title</h4>
-                      <!--Text-->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                      <button class="btn-h" mdbBtn type="button"  mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
-                      
-                      
-              
-                    </div>
-              
-                  </div>
-                  <!-- Card -->
+                    <!-- Card -->
                 </div>
                 <div class="col mb-4">
-                  <!-- Card -->
-                  <div class="card" style="background-color:  rgb(202, 147, 44);">
-              
-                    <!--Card image-->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="../../../../assets/Image/1182346.jpg"
-                        alt="Card image cap">
-                      
+                    <!-- Card -->
+                    <div class="card card-style">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="../../../../assets/Image/about-images/rituall-agent.jpg" alt="Card image cap">
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Ritual Agent</h4>
+                            <!--Text-->
+                            <p class="card-text">You can cooise Ritula agent.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button class="btn-h" [routerLink]="['/service/ritual-agent']" mdbBtn type="button" mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
+
+                        </div>
+
                     </div>
-              
-                    <!--Card content-->
-                    <div class="card-body">
-              
-                      <!--Title-->
-                      <h4 class="card-title">Card title</h4>
-                      <!--Text-->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                      <button class="btn-h" mdbBtn type="button"  mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
-                      
-                    </div>
-              
-                  </div>
-                  <!-- Card -->
+                    <!-- Card -->
                 </div>
                 <div class="col mb-4">
-                  <!-- Card -->
-                  <div class="card " style="background-color:  rgb(202, 147, 44);" >
-              
-                    <!--Card image-->
-                    <div class="view overlay">
-                      <img class="card-img-top" src="../../../../assets/Image/125-1256010_dead-wallpaper-sabino-canyon.jpg">
-                       
-                      
+                    <!-- Card -->
+                    <div class="card card-style ">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="../../../../assets/Image/about-images/support crews.jpg">
+
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Support Crews</h4>
+                            <!--Text-->
+                            <p class="card-text">As for me there are no unnecessary comments.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button [routerLink]="['/service/suport-crew']" class="btn-h" mdbBtn type="button" mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
+
+                        </div>
+
                     </div>
-              
-                    <!--Card content-->
-                    <div class="card-body">
-              
-                      <!--Title-->
-                      <h4 class="card-title">Card title</h4>
-                      <!--Text-->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                      <button class="btn-h" mdbBtn type="button"  mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
-                      
-                    </div>
-              
-                  </div>
-                  <!-- Card -->
+                    <!-- Card -->
                 </div>
                 <div class="col mb-4">
-                  <!-- Card -->
-                  <div class="card " style="background-color:  rgb(202, 147, 44);">
-              
-                    <!--Card image-->
-                    <div class="view overlay">
-                      <img class="card-img-top"  src="../../../../assets/Image/unnamed.jpg"
-                        alt="Card image cap">
-                      
+                    <!-- Card -->
+                    <div class="card  card-style">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="../../../../assets/Image/about-images/transportation deceased.jpg" alt="Card image cap">
+
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Transportaion Deceased</h4>
+                            <!--Text-->
+                            <p class="card-text">You choose the transport that will be delivered deceased to the cemetery.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button [routerLink]="['/service/transport-deceased']" class="btn-h" mdbBtn type="button" mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
+
+
+                        </div>
+
                     </div>
-              
-                    <!--Card content-->
-                    <div class="card-body">
-              
-                      <!--Title-->
-                      <h4 class="card-title">Card title</h4>
-                      <!--Text-->
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                      <button class="btn-h" mdbBtn type="button"  mdbWavesEffect><mdb-icon fas icon="info"></mdb-icon></button>
-                      
-              
-                    </div>
-              
-                  </div>
-                  <!-- Card -->
+                    <!-- Card -->
                 </div>
-              </div>
+            </div>
         </div>
 
 
@@ -163,6 +154,6 @@
     </div>
 
 
-    
-        
+
+
 </div>
