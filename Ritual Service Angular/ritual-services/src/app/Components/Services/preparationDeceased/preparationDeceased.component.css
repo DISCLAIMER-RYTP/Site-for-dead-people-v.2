@@ -1,0 +1,39 @@
+
+.body{
+    color: rgb(202, 147, 44);
+    background-color:#2E2E2E;
+}
+
+.bag1 {
+    width: 100%;
+}
+
+h1{
+    font-size: xx-large;
+}
+
+.head-img{
+    text-align: right;
+    height: 100%;
+    float: right;
+    margin-left: 2%;
+}
+
+
+.margin-x{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.img-div{
+    width: 25%;
+}
+
+.flex{
+    display: flex;
+}
+
+p{
+    font-size: large;
+    margin-bottom: 2%;
+}

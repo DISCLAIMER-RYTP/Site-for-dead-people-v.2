@@ -24,7 +24,6 @@ import { RitualAgentComponent } from './Components/Services/ritualAgent/ritualAg
 import { SupportCrewsComponent } from './Components/Services/supportCrews/supportCrews.component';
 import { PlaceCemeteryAddComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-add/placeCemetery-add.component';
 import { PlaceCemeteryUpdateComponent } from './Components/Services/PlaceCemetery-crud/placeCemetery-update/placeCemetery-update.component';
-import { PlaceCemeteryService } from './Service/placeCemetery.service';
 import { CivilFuneralsComponent } from './Components/Services/Funeral/civilFunerals/civilFunerals.component';
 import { EliteFuneralsComponent } from './Components/Services/Funeral/eliteFunerals/eliteFunerals.component';
 import { FuneralsComponent } from './Components/Services/Funeral/funerals/funerals.component';

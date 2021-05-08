@@ -85,7 +85,9 @@ const routes: Routes = [
         { path: 'military', component: MilitaryFuneralsComponent },
         { path: 'muslim', component: MuslimFuneralsComponent },
         { path: 'orthodox', component: OrthodoxFuneralsComponent }
-      ]},
+      ]}
+    ]
+  },
       {path: 'shop',
       children: [
         { path: '', component: ShopComponent },
@@ -96,8 +98,6 @@ const routes: Routes = [
         { path: 'urns', component: UrnsComponent },
         { path: 'wreaths', component: WreathsComponent }
       ]}
-    ]
-  }
 ];
 
 @NgModule({
