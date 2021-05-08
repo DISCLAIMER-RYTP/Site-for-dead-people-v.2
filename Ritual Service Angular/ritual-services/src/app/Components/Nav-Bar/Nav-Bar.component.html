@@ -60,6 +60,18 @@
                     Contact</a>
             </li>
 
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" style="color: rgb(202, 147, 44);" mdbWavesEffect>
+                    <mdb-icon fas icon="utensils"></mdb-icon>
+                    Restaurants<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary elegant-color" role="menu">
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/restaurant/funeral-dinner']">Funeral dinner</a>
+                    <a class="dropdown-item waves-light navs-comp" style="color: rgb(202, 147, 44);" mdbWavesEffect [routerLink]="['/restaurant/funeral-menu']">Funeral menu</a>
+
+
+                </div>
+            </li>
+
         </ul>
         <!-- Links -->
 

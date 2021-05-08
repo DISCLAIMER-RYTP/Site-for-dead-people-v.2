@@ -1,8 +1,13 @@
             .contact-page {
                 background-color: #222222dc;
                 width: 100%;
-                height: 100%;
+                height: 95vh;
                 background-image: url("../../../../assets/Image/00.jpg");
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                overflow: hidden;
             }
             
             .contact {

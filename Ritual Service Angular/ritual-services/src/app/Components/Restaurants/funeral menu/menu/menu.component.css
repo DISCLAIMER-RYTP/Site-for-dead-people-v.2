@@ -1,7 +1,7 @@
 .body {
-    height: auto;
+    height: 110%;
     color: rgb(202, 147, 44);
-    background-image: url("../../../../assets/Image/bg8.jpg");
+    background-image: url("../../../../../assets/Image/bg8.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -25,13 +25,4 @@ h1 {
 p {
     font-size: large;
     margin-bottom: 2%;
-}
-
-.btn-h {
-    background-color: #212121;
-    color: white;
-}
-
-.btn-h:hover {
-    background-color: #3F729B;
 }

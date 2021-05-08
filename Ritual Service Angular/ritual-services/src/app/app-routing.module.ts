@@ -34,6 +34,8 @@ import { JewishFuneralsComponent } from './Components/Services/Funeral/jewishFun
 import { MilitaryFuneralsComponent } from './Components/Services/Funeral/militaryFunerals/militaryFunerals.component';
 import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFunerals/muslimFunerals.component';
 import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
+import { DinnerComponent } from './Components/Restaurants/funeral dinner/dinner/dinner.component';
+import { MenuComponent } from './Components/Restaurants/funeral menu/menu/menu.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -47,6 +49,13 @@ const routes: Routes = [
       { path: 'edit', component: ProfileEditComponent, canActivate: [AuthGuard] },
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
+    ]
+  },
+  {
+    path:'restaurant',
+    children:[
+      {path:'funeral-dinner',component:DinnerComponent},
+      {path:'funeral-menu',component:MenuComponent}
     ]
   },
   {

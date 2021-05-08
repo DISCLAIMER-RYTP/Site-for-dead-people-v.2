@@ -44,6 +44,8 @@ import { UrnsComponent } from './Components/Shop/Urns/Urns.component';
 import { WreathsComponent } from './Components/Shop/Wreaths/Wreaths.component';
 import { AboutComponent } from './Components/About/About/About.component';
 import { ContactComponent } from './Components/Contact/contact/contact.component';
+import { DinnerComponent } from './Components/Restaurants/funeral dinner/dinner/dinner.component';
+import { MenuComponent } from './Components/Restaurants/funeral menu/menu/menu.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -84,7 +86,9 @@ const customNotifierOptions: NotifierOptions = {
     UrnsComponent,
     WreathsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    DinnerComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
