@@ -1,0 +1,39 @@
+<div class="body">
+    <div class="my-5 margin-x">
+        <div class="flex">
+            <div class="flex">
+                <div class="card-group" *ngFor="let stuff of stuffs">
+
+
+                    <mdb-card>
+                        <div class="view rgba-white-slight waves-black" mdbWavesEffect>
+                            <!-- Card img -->
+                            <mdb-card-img alt="Card image cap">{{stuff.image}}</mdb-card-img>
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card content-->
+                        <mdb-card-body>
+                            <!--Title-->
+                            <mdb-card-title>
+                                <h4>{{stuff.name}}</h4>
+                            </mdb-card-title>
+
+                            <!--Text-->
+                            <mdb-card-text>
+                                {{stuff.description}}
+                            </mdb-card-text>
+                            <p>{{stuff.price}}</p>
+
+                            <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+                        </mdb-card-body>
+                    </mdb-card>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>

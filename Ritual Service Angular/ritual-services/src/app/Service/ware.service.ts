@@ -10,7 +10,7 @@ import { WareDto } from '../Models/wareDto';
 export class WareService {
 
   constructor(private http: HttpClient) { }
-  getWare(): Observable<ApiResponse>{
+    getWare(): Observable<ApiResponse>{
       return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware");
     }
   
@@ -25,5 +25,9 @@ export class WareService {
   
     updateWare(book: WareDto): Observable<ApiResponse>{
       return this.http.post<ApiResponse>('https://localhost:44339/api/ware/Update',book);
+    }
+
+    getWareCategory(category:string): Observable<ApiResponse>{
+      return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware"+category);
     }
 }

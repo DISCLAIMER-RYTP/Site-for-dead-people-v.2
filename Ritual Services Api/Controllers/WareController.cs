@@ -22,8 +22,9 @@ namespace Ritual_Services_Api.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public List<WareDto> GetWares()
+        [HttpGet("{category}")]
+        
+        public List<WareDto> GetWares([FromRoute]string name)
         {
             return _context.Wares.Select(w => new WareDto
             {
@@ -31,8 +32,9 @@ namespace Ritual_Services_Api.Controllers
                 Name = w.Name,
                 Image = w.Image,
                 Price = w.Price,
-                Description = w.Description
-            }).ToList();
+                Description = w.Description,
+                CategoryName=w.Category.Name
+            }).Where(w=>w.CategoryName==name).ToList();
         }
 
         [HttpPost("Add")]
