@@ -22,9 +22,14 @@ namespace Ritual_Services_Api.Controllers
             _context = context;
         }
 
+<<<<<<< Updated upstream
         [HttpGet("{category}")]
         
         public List<WareDto> GetWares([FromRoute]string name)
+=======
+        [HttpGet]
+        public List<WareDto> GetWares([FromRoute] string name)
+>>>>>>> Stashed changes
         {
             return _context.Wares.Select(w => new WareDto
             {
@@ -33,8 +38,13 @@ namespace Ritual_Services_Api.Controllers
                 Image = w.Image,
                 Price = w.Price,
                 Description = w.Description,
+<<<<<<< Updated upstream
                 CategoryName=w.Category.Name
             }).Where(w=>w.CategoryName==name).ToList();
+=======
+                CategoryName = w.Category.Name
+            }).Where(w=>w.CategoryName == name).ToList();
+>>>>>>> Stashed changes
         }
 
         [HttpPost("Add")]

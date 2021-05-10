@@ -1,0 +1,228 @@
+.container{
+    padding-left: 25%;
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform:scale(0.1,0.1);
+		opacity:0 
+   }
+	50% {
+		opacity:1 
+   }
+	100% {
+		-webkit-transform:scale(1.2,1.2);
+		opacity:0 
+   }
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,smcolor,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	text-align:left;
+	vertical-align:baseline 
+}
+a img,:link img,:visited img {
+	border:0 
+}
+q:before,q:after,blockquote:before,blockquote:after {
+	content:"" 
+}
+a:visited {
+	color:#d2ae7e 
+}
+.col-xs-15 {
+	width:20%;
+	position:relative;
+	min-height:1px;
+	padding-right:15px;
+	padding-left:15px;
+	float:left 
+}
+#nav {
+	list-style:none;
+	position:fixed;
+	right:20px;
+	z-index:999;
+	top:45% 
+}
+#nav li {
+	margin:0 0 5px 
+}
+html,body {
+	font-family:'Verdana',serif!important;
+	background:#000 
+}
+.main {
+	background:url(../../../../assets/Image/Services/whiteplaster.png) 
+}
+.head-top {
+	margin:20px 0 
+}
+a:link {
+	text-decoration:none;
+	color:#d2ae7e 
+}
+.nicescroll-rails div {
+	width: 7px!important;
+}
+.content-wrapper {
+	position:relative;
+	padding-top:214px 
+}
+.w-service {
+	background:url(../../../../assets/Image/Services/whiteplaster.png) 
+}
+.b-service {
+	background:url(../../../../assets/Image/Services/grunge.png) 
+}
+.ws-image,.b-image {
+	width:240px;
+	height:240px;
+	overflow:hidden;
+	text-align:center;
+	-moz-border-radius:150px;
+	-webkit-border-radius:150px;
+	border-radius:150px;
+	-o-border-radius:150px;
+	border:5px solid #EEE;
+	-moz-box-shadow:0 0 10px #777;
+	-webkit-box-shadow:0 0 10px #777;
+	box-shadow:0 0 10px #777;
+	margin:30px auto 
+}
+.ws-image img,.b-image img {
+	-moz-border-radius:100%;
+	-webkit-border-radius:100;
+	border-radius:100 
+}
+.w-text {
+	margin-bottom:30px 
+}
+.w-text h2 {
+	padding:50px 0 20px 
+}
+.w-text h2 a,.content-title h2 a {
+	font-size:24px;
+	color:#414141;
+	font-weight:800;
+	text-shadow:#fff 1px 1px 1px 
+}
+.ws-descr,.calendar-desc,.deadman-desc {
+	color:#777;
+	text-align:justify;
+	line-height:20px;
+	font-size:12px 
+}
+.w-info,.newsc-info {
+	display:inline-block;
+	font-size:12px;
+	color:#fff!important;
+	background:#414141;
+	border:3px solid #ccc;
+	text-transform:uppercase;
+	text-align:center;
+	-webkit-box-shadow:inset 0 0 10px #222;
+	-moz-box-shadow:inset 0 0 10px #222;
+	box-shadow:inset 0 0 10px #222;
+	padding:10px 20px;
+	margin-top:30px;
+	text-align:center 
+}
+.w-info:hover,.newsc-info:hover {
+	background:#d2ae7e;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	border:3px solid #ccc;
+	opacity:.8 
+}
+.newsc-info {
+	margin-top:0 
+}
+.b-text h2 {
+	padding:50px 0 20px 
+}
+.b-text h2 a {
+	font-size:24px;
+	color:#414141;
+	font-weight:800;
+	text-shadow:#aaa 1px 1px 1px 
+}
+.b-descr {
+	color:#fff;
+	text-align:justify;
+	line-height:20px;
+	font-size:12px 
+}
+.b-text .b-info {
+	text-align:center 
+}
+.b-info {
+	display:inline-block;
+	font-size:12px;
+	color:#fff!important;
+	background:#414141;
+	border:3px solid #777;
+	text-transform:uppercase;
+	text-align:center;
+	-webkit-box-shadow:inset 0 0 10px #222;
+	-moz-box-shadow:inset 0 0 10px #222;
+	box-shadow:inset 0 0 10px #222;
+	padding:10px 20px;
+	margin-top:30px;
+	text-align:center 
+}
+.b-info:hover {
+	background:#d2ae7e;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	border:3px solid #757575;
+	opacity:.8 
+}
+.service-descr-wrapper {
+	position:relative;
+	background:#d2ae7e;
+	padding:30px 0 20px 
+}
+.service-dropdown {
+	border-top:1px solid #E4C9A4;
+	border-bottom:1px solid#8B6B40;
+	height:0;
+	text-align:center 
+}
+.sd-header {
+	text-align:center;
+	font-size:24px;
+	font-weight:700;
+	line-height:40px;
+	padding:0 20px;
+	display:inline-block;
+	position:relative;
+	top:-20px;
+	color:#414141;
+	background:#d2ae7e;
+	text-transform:uppercase;
+	text-shadow:#EBD4B5 1px 1px 1px 
+}
+.sd-text {
+	margin:30px 0 0;
+	text-align:justify;
+	color:#77582D;
+	text-shadow:#EBD4B5 1px 1px 1px 
+}
+.d-arrow {
+	left:50%;
+	margin-left:-8px;
+	cursor:pointer;
+	position:relative;
+	background:url(../../../../assets/Image/Services/d-arrow.png) 0 0;
+	width:16px;
+	height:12px;
+	margin-top:25px 
+}

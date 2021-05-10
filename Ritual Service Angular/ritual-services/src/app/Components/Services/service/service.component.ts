@@ -9,7 +9,9 @@ export class ServiceComponent implements OnInit {
 
   constructor() { }
 
+  category = localStorage.getItem("category");
   ngOnInit() {
+    
   }
 
 }
