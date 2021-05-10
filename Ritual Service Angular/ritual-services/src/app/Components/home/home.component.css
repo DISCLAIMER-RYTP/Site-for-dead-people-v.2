@@ -1194,3 +1194,25 @@ input, select, textarea
 .back{
     background-image: url(../../../assets/Image/00.jpg);
 }
+
+
+.modal-header{
+  background-color: #2E2E2E;
+  color: rgb(202, 147, 44);
+  text-align: center;
+}
+
+.modal-body{
+  background-color: #2E2E2E;
+  color: rgb(202, 147, 44);
+}
+
+.modal-footer{
+  background-color: #2E2E2E;
+  color: rgb(202, 147, 44);
+}
+
+.btn-dark{
+  background-color: #2E2E2E;
+  color: rgb(202, 147, 44);
+}

@@ -4,11 +4,7 @@
         <div class="ritual-content-layout">
             <div class="ritual-content-layout-row">
                 <div class="ritual-layout-cell ritual-content clearfix">
-                    <!-- begin nostyle -->
                     <div class="ritual-nostyle" style="position	: relative;">
-                        <!-- begin nostyle content -->
-
-                        <!-- Nextend Smart Slider 3 #1 - BEGIN -->
                         <div style="margin-left: 0px; ">
                             <div class="n2-padding">
                                 <div data-minfontsizedesktopportrait="4" data-minfontsizedesktoplandscape="4"
@@ -55,32 +51,43 @@
                                                                         measures to be taken immediately after death</p>
                                                                     <div class="row_1 wow fadeInUp animated"
                                                                         style="animation-delay: 3.3s; visibility: visible; animation-name: fadeInUp;">
-                                                                        <a class="info_serv" href="/night-time">The
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(night)">The
                                                                             death occurred at night</a>
                                                                         <a class="info_serv"
-                                                                            href="/death-not-home">Death did not come at
+                                                                            (click)="openScrollableContent(home)">Death
+                                                                            did not come at
                                                                             home (outside the
                                                                             city, in the countryside)</a>
-                                                                        <a class="info_serv" href="/in-hospital">In a
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(hospital)">In
+                                                                            a
                                                                             medical institution</a>
                                                                     </div>
                                                                     <div class="row_2 wow fadeInUp animated"
                                                                         style="animation-delay: 3.6s; visibility: visible; animation-name: fadeInUp;">
-                                                                        <a class="info_serv" href="/day-time">The death
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(day)">The
+                                                                            death
                                                                             occurred during the day</a>
-                                                                        <a class="info_serv" href="/in-public-place">In
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(public)">In
                                                                             a public place (car accident, murder
                                                                             ...)</a>
-                                                                        <a class="info_serv" href="/abroad">Abroad</a>
+                                                                        <a class="info_serv" (click)="openScrollableContent(abroad)">Abroad</a>
                                                                     </div>
                                                                     <div class="row_3 wow fadeInUp animated"
                                                                         style="animation-delay: 3.9s; visibility: visible; animation-name: fadeInUp;">
                                                                         <a class="info_serv"
-                                                                            href="/things-to-morgue">Preparing things
-                                                                            for the morgue</a> <a class="info_serv"
-                                                                            href="/preparation-of-documents">Preparation
-                                                                            of documents</a> <a class="info_serv"
-                                                                            href="/online-support">Get online help</a>
+                                                                            (click)="openScrollableContent(morgue)">Preparing
+                                                                            things
+                                                                            for the morgue</a>
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(doc)">Preparation
+                                                                            of documents</a>
+                                                                        <a class="info_serv"
+                                                                            (click)="openScrollableContent(support)">Get
+                                                                            online help</a>
                                                                     </div>
                                                                 </div>
                                                                 <p class="arrows" style="text-align: center;">
@@ -170,24 +177,30 @@
                                     <div class="first_block">
                                         <p class="funeral_1 wow fadeInRight animated"
                                             style="animation-delay: 0.6s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/civil-funeral">Civil funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/civil']">Civil funeral</a>
+                                        </p>
                                         <p class="funeral_2 wow fadeInRight animated"
                                             style="animation-delay: 0.8s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/military-burial">Military funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/military']">Military funeral</a>
+                                        </p>
                                         <p class="funeral_3 wow fadeInRight animated"
                                             style="animation-delay: 1s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/elite-funeral">Elite funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/elite']">Elite funeral</a>
+                                        </p>
                                     </div>
                                     <div class="second_block">
                                         <p class="funeral_4 wow fadeInRight animated"
                                             style="animation-delay: 1.2s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/orthodox-funeral">Orthodox funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/orthodox']">Orthodox funeral</a>
+                                        </p>
                                         <p class="funeral_5 wow fadeInRight animated"
                                             style="animation-delay: 1.4s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/muslim-funeral">Muslim funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/muslim']">Muslim funeral</a>
+                                        </p>
                                         <p class="funeral_6 wow fadeInRight animated"
                                             style="animation-delay: 1.6s; visibility: visible; animation-name: fadeInRight;">
-                                            <a href="/services/burial/jewish-funerals">Jewish funeral</a></p>
+                                            <a [routerLink]="['/service/funeral/jewish']">Jewish funeral</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -199,4 +212,298 @@
             </div>
         </div>
     </div>
+
+    <ng-template #night let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">The death occurred at night</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Call an ambulance, which states the death;</li>
+                <li>Call police officers, who will draw up a report on the examination of the corpse;</li>
+                <li>Be sure to receive a death certificate and a protocol of examination of the corpse from medical
+                    staff and police, respectively;</li>
+                <li>If necessary, call a special team to transport the deceased to the morgue (phone numbers can be
+                    found in the ambulance crew). The report of the examination of the corpse and the death certificate
+                    must be handed over to the officers of the summoned service for provision to the morgue together
+                    with the body. At the same time it is necessary to receive from employees of service on
+                    transportation of the dead the form of the direction to polyclinic (to issue the ambulatory card if
+                    it is not present on hands);</li>
+                <li>If necessary, call a special team to transport the deceased to the morgue (phone numbers can be
+                    found in the ambulance crew). The report of the examination of the corpse and the death certificate
+                    must be handed over to the officers of the summoned service for provision to the morgue together
+                    with the body. At the same time it is necessary to receive from employees of service on
+                    transportation of the dead the form of the direction to polyclinic (to issue the ambulatory card if
+                    it is not present on hands);</li>
+                <li>If the body was not transported to the morgue, then in the morning you should go to the clinic to
+                    obtain a medical certificate of death. You can apply to the district doctor or the head of the
+                    polyclinic on this issue, and you must have a corpse examination report, a death certificate, a
+                    medical policy, as well as an outpatient card of the deceased;</li>
+                <li>If the body was transported to the morgue, then in the morning you should go to the clinic to obtain
+                    an outpatient card of the deceased with a record of the posthumous epicrisis. It is also necessary
+                    to have a referral from the deceased's transport service, a medical policy, the deceased's passport
+                    and the applicant's passport. After receiving an outpatient card (with mandatory post-mortem
+                    epicrisis), you should apply to the morgue for further registration of a medical death certificate;
+                </li>
+                <li>With a death certificate obtained at the polyclinic (or morgue) you need to apply to the registry
+                    office (at the place of residence, or to the next registry office during non-working days, or at the
+                    location of the clinic / morgue) to issue a death certificate and a stamp death certificate. ;</li>
+                <li>Contact the Ritual Service in Rivne to organize a funeral.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #home let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Death came not at home (outside the city, visiting)</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Call an ambulance and police from the area where the death occurred. Obtain a death certificate from
+                    ambulance workers. Receive from police officers the protocol of examination of the corpse and
+                    registration of the referral of the deceased for forensic autopsy;</li>
+                <li>Call a special service to transport the deceased to the morgue of the area where the death occurred.
+                    All the documents listed above are handed over to the staff of the called service for submission to
+                    the morgue together with the body;</li>
+                <li>Next, you should go to the morgue, where the deceased was taken, to obtain a medical death
+                    certificate. Carry the passport of the deceased and the passport of the applicant;</li>
+                <li>With the received medical certificate of death to address in РАЦС for reception of the certificate
+                    of death of the established sample and the stamp certificate of death. In the absence of a stamp
+                    certificate of death, it is forbidden to transport the body to another morgue !;</li>
+                <li>Contact the Ritual Service in Kropyvnytskyi to organize a funeral.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #day let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">The death occurred during the day</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Call a district doctor, who will examine the body and state the death, as well as draw up a form stating the death;</li>
+                <li>Call the police, whose staff will provide a report on the examination of the corpse;</li>
+                <li>Having a death certificate, a corpse examination report, a medical policy and an outpatient card of the deceased (if
+                    available), the passport of the deceased and the applicant's passport, you should contact the clinic to obtain a
+                    medical death certificate, or to resolve the need for referral. deceased for autopsy;</li>
+                <li>If a decision is made on the need for an autopsy, call a special team to transport the dead to the morgue. Then you
+                    need to go to the morgue, where the body was taken, to obtain a medical certificate of death. Carry the passport of
+                    the deceased and the passport of the applicant;</li>
+                <li>To receive a death certificate of the established sample in the Registry Office, as well as a stamp death
+                    certificate. To do this, you must provide the registry office with a medical death certificate;</li>
+                <li>Contact the Ritual Service in Kirovohrad to organize a funeral.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #doc let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Preparation of documents</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>
+                During the funeral, the registration of documents after death is one of the most important periods. For a fast
+                procedure of registration of documents it is necessary to study all necessary list of documents. Registration of
+                documents after death is carried out in the relevant institutions. This procedure takes place only upon presentation
+                of the passport of the person responsible for organizing the funeral. The applicant may be a relative of the
+                deceased or another citizen who has undertaken to conduct and organize the funeral.
+            <br>
+            <br>
+                Each document issued by a medical organization or a registry office requires careful verification of the records
+                entered in it. Particular attention should be paid to the dates, the accuracy of writing by officials of the column
+                indicating the surname, patronymic of the deceased, the date of his birth and death, place of birth and death, as
+                well as a clear indication of the cause of death. It is necessary to make sure that the papers are certified by the
+                seal of the organization and signed by officials.
+            </p>
+            <ul>
+                <li>Death statement form (issued by the ambulance crew);</li>
+                <li>Medical death certificate (issued by a clinic doctor or morgue staff);</li>
+                <li>Corpse examination report (issued by a police officer);</li>
+                <li>Stamp certificate of death of the registry office (issued by the registry office);</li>
+                <li>Death certificate (form 33);</li>
+                <li>Certificate for receiving state assistance for burial (issued by employees of the registry office);</li>
+                <li>Agreement on the provision of ritual services (executed by the agent of the funeral service).</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #support let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">The death occurred at night</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Call an ambulance, which states the death;</li>
+                <li>Call police officers, who will draw up a report on the examination of the corpse;</li>
+                <li>Be sure to receive a death certificate and a protocol of examination of the corpse from medical
+                    staff and police, respectively;</li>
+                <li>If necessary, call a special team to transport the deceased to the morgue (phone numbers can be
+                    found in the ambulance crew). The report of the examination of the corpse and the death certificate
+                    must be handed over to the officers of the summoned service for provision to the morgue together
+                    with the body. At the same time it is necessary to receive from employees of service on
+                    transportation of the dead the form of the direction to polyclinic (to issue the ambulatory card if
+                    it is not present on hands);</li>
+                <li>If necessary, call a special team to transport the deceased to the morgue (phone numbers can be
+                    found in the ambulance crew). The report of the examination of the corpse and the death certificate
+                    must be handed over to the officers of the summoned service for provision to the morgue together
+                    with the body. At the same time it is necessary to receive from employees of service on
+                    transportation of the dead the form of the direction to polyclinic (to issue the ambulatory card if
+                    it is not present on hands);</li>
+                <li>If the body was not transported to the morgue, then in the morning you should go to the clinic to
+                    obtain a medical certificate of death. You can apply to the district doctor or the head of the
+                    polyclinic on this issue, and you must have a corpse examination report, a death certificate, a
+                    medical policy, as well as an outpatient card of the deceased;</li>
+                <li>If the body was transported to the morgue, then in the morning you should go to the clinic to obtain
+                    an outpatient card of the deceased with a record of the posthumous epicrisis. It is also necessary
+                    to have a referral from the deceased's transport service, a medical policy, the deceased's passport
+                    and the applicant's passport. After receiving an outpatient card (with mandatory post-mortem
+                    epicrisis), you should apply to the morgue for further registration of a medical death certificate;
+                </li>
+                <li>With a death certificate obtained at the polyclinic (or morgue) you need to apply to the registry
+                    office (at the place of residence, or to the next registry office during non-working days, or at the
+                    location of the clinic / morgue) to issue a death certificate and a stamp death certificate. ;</li>
+                <li>Contact the Ritual Service in Kropyvnytskyi to organize a funeral.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #hospital let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">He died in a hospital</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>
+                    The attending physician or nurse notifies the relatives of the death and informs how to find out the information in
+                    which morgue the deceased is and how to obtain a death certificate. As a rule, the body of the deceased is in the
+                    morgue of the medical institution and, at the request of relatives, may be there until the moment of transportation
+                    of the deceased to another morgue or burial place;</li>
+                <li>With the received death certificate it is necessary to apply to the Registry Office for registration of the death
+                    certificate of the established sample and the stamp death certificate;</li>
+                <li>Contact the Ritual Service in Kirovohrad to organize a funeral.</li>
+                <p>Important to know:</p>
+                <li>A medical certificate of death is issued by the staff of the polyclinic only if no more than 10 working days have
+                    passed
+                    since the last visit of the deceased to the doctor;</li>
+                <li>Carefully check all the information provided in the medical certificate of death, as it is prohibited by law to make
+                    any
+                    corrections to this document.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #morgue let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Preparing things for the morgue</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>It is very important to escort the deceased to the last mourning path with his worthy honors. The loss is
+                irreparable, the grief of relatives and friends is inconsolable, but it is simply necessary to keep the image of the
+                deceased in one's memory. Ritual clothing is of great importance in preserving and fixing the positive image of the
+                deceased.</p>
+            <ul>
+                <h5>For a man: </h5>
+                <li>underwear;</li>
+                <li>socks;</li>
+                <li>suit, shirt, tie;</li>
+                <li>shoes (or slippers);</li>
+                <li>shaving machine, eau de toilette (cologne);</li>
+                <li>toilet soap, comb, terry towel (small).</li>
+                <h5>For women:</h5>
+                <li>underwear;</li>
+                <li>stockings (or tights);</li>
+                <li>long-sleeved dress (suit or bathrobe);</li>
+                <li>headscarf (not black);</li>
+                <li>shoes (or slippers);</li>
+                <li>toilet water, soap, comb, towel.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <ng-template #public let-modal dark-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">In a public place (car accident, murder ...)</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li>Call an ambulance;</li>
+                <li>Call the police;</li>
+                <li>The body of the deceased will be taken to a forensic morgue for autopsy. It should be borne in mind that the consent of
+                    the relatives of the deceased for a forensic autopsy, in contrast to the pathological, is not required;</li>
+                <li>Get a medical certificate of death in the morgue;</li>
+                <li>In the Registry Office to issue a stamp certificate of death;</li>
+                <li>Contact the Ritual Service in Kirovohrad to organize a funeral.</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    
+    <ng-template #abroad let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title">Death came abroad</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>
+                In many foreign countries, local law requires that a death application be filed with the local registry office. In any
+                case, it is recommended to additionally make an application to the consulate of the country of which the deceased had
+                citizenship, and ask the consular services to register the fact of death in their register. Completion of these
+                formalities in the future will allow to obtain a death certificate in the country of permanent residence of the
+                deceased.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-dark" (click)="modal.close('Close click')">Close</button>
+        </div>
+    </ng-template>
 </div>

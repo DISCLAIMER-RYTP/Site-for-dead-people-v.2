@@ -45,6 +45,7 @@ import { AboutComponent } from './Components/About/About/About.component';
 import { ContactComponent } from './Components/Contact/contact/contact.component';
 import { DinnerComponent } from './Components/Restaurants/funeral dinner/dinner/dinner.component';
 import { MenuComponent } from './Components/Restaurants/funeral menu/menu/menu.component';
+import { HomeComponent } from './Components/home/home.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: { horizontal: { position: 'right' }, vertical: { position: 'top' } }
@@ -87,7 +88,8 @@ const customNotifierOptions: NotifierOptions = {
     AboutComponent,
     ContactComponent,
     DinnerComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
