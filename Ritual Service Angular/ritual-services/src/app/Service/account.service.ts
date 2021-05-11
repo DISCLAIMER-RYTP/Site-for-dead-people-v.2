@@ -14,9 +14,9 @@ export class AccountService {
   loginStatus = new EventEmitter<boolean>();
   
   constructor(private http: HttpClient) { }
-  register(user: RegisterDto): Observable<ApiResponse> {
-    console.log(user);
-    return this.http.post<ApiResponse>('https://localhost:44339/api/account/register', user);
+  register(form: FormData): Observable<ApiResponse> {
+    console.log(form.get('dto'));
+    return this.http.post<ApiResponse>('https://localhost:44339/api/account/register', form);
   }
   login(user: LoginDto): Observable<ApiResponse> {
     return this.http.post<ApiResponse>('https://localhost:44339/api/account/login', user);

@@ -39,7 +39,8 @@ export class RegisterComponent implements OnInit {
 
   onRegister()
   {
-    this.accountService.register(this.register).subscribe((res: ApiResponse) =>{
+    this.formData.append('dto', JSON.stringify(this.register));
+    this.accountService.register(this.formData).subscribe((res: ApiResponse) =>{
       if(res.isSuccessful){
         console.log(res.message)
         this.router.navigate(['/']);
