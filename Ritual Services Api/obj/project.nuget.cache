@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l5dHx3/f3Us64/oISqTq7/X+9Ezkf7ENeJNsFKGydS0kBz/FN4chTzievgo++4zYjb3NmgzcwBe8aOoiRKPcqw==",
+  "dgSpecHash": "J+j256PysjLdQjnQbDbWbW4UX6tPhi0dYa1MN8TGIMbgt8pXPcmApH7HZy8F7rLLfJ8A91q0sIe5djXAmOKpbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matv_tj8m\\Documents\\GitHub\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+  "projectFilePath": "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matv_tj8m\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Matv_tj8m\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.14\\microsoft.aspnetcore.authentication.jwtbearer.3.1.14.nupkg.sha512",
