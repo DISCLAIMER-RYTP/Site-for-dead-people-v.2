@@ -30,6 +30,7 @@ export class ProfileComponent implements OnInit {
     };
   
     id: any;
+    path:string='https://localhost:44339/Images/';
 
     ngOnInit() {
       this.id = this.route.snapshot.paramMap.get('id');

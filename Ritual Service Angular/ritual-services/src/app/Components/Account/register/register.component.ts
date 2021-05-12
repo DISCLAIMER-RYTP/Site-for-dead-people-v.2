@@ -28,13 +28,19 @@ export class RegisterComponent implements OnInit {
     phoneNumber: ''
   }
 
+  formData: FormData = new FormData();
+  DogIdAddPhoto: number = 0;
+  part: string = 'edit';
+  imgSrc: string = '';
+
   ngOnInit() {
   }
 
 
   onRegister()
   {
-    this.accountService.register(this.register).subscribe((res: ApiResponse) =>{
+    this.formData.append('dto', JSON.stringify(this.register));
+    this.accountService.register(this.formData).subscribe((res: ApiResponse) =>{
       if(res.isSuccessful){
         console.log(res.message)
         this.router.navigate(['/']);
@@ -42,6 +48,20 @@ export class RegisterComponent implements OnInit {
     })
   }
 
+  uploadPhoto(e: any) {
+    if (e.target!= null) {
+      if (e.target.files && e.target.files.item(0)) {
+        this.formData.append('file', e.target.files.item(0) as File);
+        console.log(e.target.files);
+        this.imgSrc = URL.createObjectURL(e.target.files[0]);
+      }
+      // this.userService.UploadPhoto(this.EditDog.id.toString(), this.formData).subscribe((res: ApiResponse) => {
+      //   if (res.isSuccessful) {
+
+      //   }
+      // });
+    }
+  }
 
 
  

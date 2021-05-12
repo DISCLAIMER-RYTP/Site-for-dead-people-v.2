@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using Ritual_Services_Api.Helpers;
 using Ritual_Services_Api.Models.Dto;
 using Ritual_Services_Api.Models.Dto.ResultDto;
 using Ritual_Services_Api.Models.Entities.Identity;
@@ -21,17 +27,20 @@ namespace Ritual_Services_Api.Controllers
         private readonly ApplicationContext ctx;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IWebHostEnvironment _appEnvironment;
         private readonly IJwtTokenService _jwtTokenService;
 
         public AccountController(
                 ApplicationContext context,
                 UserManager<User> userManager,
                 SignInManager<User> signInManager,
+                IWebHostEnvironment appEnvironment,
                 IJwtTokenService jwtTokenService)
         {
             _userManager = userManager;
             ctx = context;
             _signInManager = signInManager;
+            _appEnvironment = appEnvironment;
             _jwtTokenService = jwtTokenService;
         }
 
@@ -56,8 +65,18 @@ namespace Ritual_Services_Api.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<ResultDto> Register([FromBody] RegisterDto model)
+        public async Task<ResultDto> Register([FromForm(Name = "dto")] string args, [FromForm] IFormFile file)
         {
+            var json = JObject.Parse(args);
+            RegisterDto model = new RegisterDto
+            {
+                FullName = json.SelectToken("fullName").Value<string>(),
+                Email = json.SelectToken("email").Value<string>(),
+                Age = Int32.Parse(json.SelectToken("age").Value<string>()),
+                Password = json.SelectToken("password").Value<string>(),
+                PhoneNumber = json.SelectToken("phoneNumber").Value<string>()
+            };
+
             try
             {
                 User user = new User()
@@ -67,12 +86,53 @@ namespace Ritual_Services_Api.Controllers
                     UserName = model.Email
                 };
                 await _userManager.CreateAsync(user, model.Password);
+
+
+                string fileName = Guid.NewGuid().ToString() + ".jpg";
+                string path = _appEnvironment.WebRootPath + @"\Images";
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                path = path + @"\" + fileName;
+                if (file == null)
+                    return new ResultDto
+                    {
+                        IsSuccessful = false,
+                        Message = "Error"
+                    };
+                if (file.Length == 0)
+                    return new ResultDto
+                    {
+                        IsSuccessful = false,
+                        Message = "Empty"
+                    };
+                try
+                {
+                    using (Bitmap bmp = new Bitmap(file.OpenReadStream()))
+                    {
+                        var saveImage = ImageWorker.CreateImage(bmp, 200, 125);
+                        if (saveImage != null)
+                        {
+                            saveImage.Save(path, ImageFormat.Jpeg);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return new ResultDto
+                    {
+                        IsSuccessful = false,
+                        Message = ex.Message
+                    };
+                }
+
                 UserAdditionalInfo ui = new UserAdditionalInfo()
                 {
                     Id = user.Id,
                     Age = model.Age,
                     FullName = model.FullName,
-                    Image = model.Image
+                    Image = fileName
                 };
 
                 var result = _userManager.AddToRoleAsync(user, "User").Result;
@@ -81,8 +141,8 @@ namespace Ritual_Services_Api.Controllers
                 await ctx.SaveChangesAsync();
 
                 return new ResultDto
-                {
-                    IsSuccessful = true
+            {
+                IsSuccessful = true
                 };
             }
             catch (Exception ex)

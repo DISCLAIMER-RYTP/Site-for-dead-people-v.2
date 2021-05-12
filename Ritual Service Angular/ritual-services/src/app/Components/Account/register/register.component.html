@@ -19,47 +19,45 @@
                         <div class="col">
                             <!-- First name -->
                             <div class="md-form">
-                                <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput>
-                                <label for="materialRegisterFormFirstName">Full Name</label>
+                                <input style="color: rgb(202, 147, 44);" [(ngModel)]="register.fullName" name="fullName" type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput>
+                                <label style="color: rgb(202, 147, 44);" for="materialRegisterFormFirstName">Full Name</label>
                             </div>
                         </div>
                         <div class="col">
                             <!-- Last name -->
                             <div class="md-form">
-                                <input type="number" id="materialRegisterFormLastName" class="form-control" mdbInput>
-                                <label for="materialRegisterFormLastName">Age</label>
+                                <input style="color: rgb(202, 147, 44);" [(ngModel)]="register.age" name="age" type="number" id="materialRegisterFormLastName" class="form-control" mdbInput>
+                                <label style="color: rgb(202, 147, 44);" for="materialRegisterFormLastName">Age</label>
                             </div>
                         </div>
                     </div>
     
                     <!-- E-mail -->
                     <div class="md-form mt-0">
-                        <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
-                        <label for="materialRegisterFormEmail">E-mail</label>
+                        <input style="color: rgb(202, 147, 44);" [(ngModel)]="register.email" name="email" type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
+                        <label style="color: rgb(202, 147, 44);" for="materialRegisterFormEmail">E-mail</label>
                     </div>
     
                     <!-- Password -->
                     <div class="md-form">
-                        <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" mdbInput>
-                        <label for="materialRegisterFormPassword">Password</label>
-                        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                        <input style="color: rgb(202, 147, 44);" [(ngModel)]="register.password" name="password" type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" mdbInput>
+                        <label style="color: rgb(202, 147, 44);" for="materialRegisterFormPassword">Password</label>
+                        <small style="color: rgb(202, 147, 44);" id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                 At least 8 characters and 1 digit
               </small>
                     </div>
     
                     <!-- Phone number -->
                     <div class="md-form">
-                        <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
-                        <label for="materialRegisterFormPhone">Phone number</label>
-                        <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                        <input style="color: rgb(202, 147, 44);" [(ngModel)]="register.phoneNumber" name="phoneNumber" type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
+                        <label style="color: rgb(202, 147, 44);" for="materialRegisterFormPhone">Phone number</label>
+                        <small style="color: rgb(202, 147, 44);" id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
                 Optional - for two-step authentication
               </small>
                     </div>
                     <div class="md-form">
-                        <button type="button" class="btn btn-warning btn-rounded">
-                        <i class="fas fa-download"></i>
-                        </button>
-                        <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                        <input style="color: rgb(202, 147, 44); width: auto;"  class="btn btn-floating fas fa-download" type="file" (change)="uploadPhoto($event)" [(ngModel)]="register.image" name="image" id="psw" value="Upload Photo"> 
+                        <small style="color: rgb(202, 147, 44);" id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
               Upload photo
             </small>
                     </div>
@@ -73,7 +71,7 @@
                     <mdb-checkbox style="color: whitesmoke;">Subscribe to our newsletter</mdb-checkbox>
     
                     <!-- Sign up button -->
-                    <button mdbBtn color="elegant" [outline]="true " [rounded]="true " [block]="true " class="my-4 waves-effect z-depth-0 btn btn-outline-light btn-rounded " mdbWavesEffect type="submit ">Register</button>
+                    <button mdbBtn color="elegant" [outline]="true " [rounded]="true " [block]="true " (click)="onRegister()" class="my-4 waves-effect z-depth-0 btn btn-outline-light btn-rounded " mdbWavesEffect type="submit ">Register</button>
     
                     <!-- Social register -->
                     <p>or sign up with:</p>
