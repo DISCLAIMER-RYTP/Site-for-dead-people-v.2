@@ -31,11 +31,24 @@ export class LoginComponent implements OnInit {
     this.accountService.login(this.login).subscribe((res: any) =>{
       console.log(res)
       if(res.isSuccessful){
-        console.log(res)
+      console.log(res)
+        const jwtData = res.token.split('.')[1];
+        const decodedJwtJsonData = window.atob(jwtData);
+        const decodedJwtData = JSON.parse(decodedJwtJsonData);
+        if (decodedJwtData.roles == "User") {
         localStorage.setItem("id",res.message)
         localStorage.setItem("token",res.token)
+        this.accountService.loginStatus.emit(true);
         this.notifier.notify('success', ' Ok');
         this.router.navigate(['/account', {id: res.message}]); 
+        }
+        else if (decodedJwtData.roles == "Admin") {
+          localStorage.setItem("id",res.message)
+          localStorage.setItem("token",res.token)
+          this.accountService.loginStatus.emit(true);
+          this.notifier.notify('success', ' Ok');
+          this.router.navigate(['/admin']); 
+          }
       }
       else{
         this.notifier.notify('error', 'Error login or password');

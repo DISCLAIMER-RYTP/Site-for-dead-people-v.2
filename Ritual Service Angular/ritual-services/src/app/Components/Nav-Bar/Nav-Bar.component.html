@@ -1,4 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark elegant-color" [containerInside]="false">
+<mdb-navbar *ngIf="!IsAdmin" SideClass="navbar navbar-expand-lg navbar-dark elegant-color" [containerInside]="false">
 
     <mdb-navbar-brand><a class="navbar-brand px-2 py-2" href="#" style="border-radius: 3px; text-decoration: solid; font-weight: bold; background-color: black;">Dead 
             <span class="px-2" style="background-color:rgb(202, 147, 44); border-radius: 3px; color: black;">Inside</span></a>
@@ -161,3 +161,4 @@
     </links>
 
 </mdb-navbar>
+<div *ngIf="IsAdmin" style="width: 0; margin: 0; padding: 0;"></div>

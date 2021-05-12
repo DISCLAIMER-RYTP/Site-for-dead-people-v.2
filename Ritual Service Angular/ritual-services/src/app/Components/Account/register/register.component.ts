@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
   }
 
   formData: FormData = new FormData();
-  DogIdAddPhoto: number = 0;
   part: string = 'edit';
   imgSrc: string = '';
 

@@ -12,8 +12,16 @@
     
                 <div class="text-center content" style=" display: flex;">
     
-                    <div class="md-form col" >
-                        <img src="{{path}}{{prop.image}}"  style="min-height: 100%;" />
+                    <div class="md-form col">
+                        <img src="{{path}}{{prop.image}}" style="min-height: 100%;" />
+                        <div class="md-form">
+                            <input style="color: rgb(202, 147, 44); width: auto;" class="btn btn-floating fas fa-download" type="file"
+                                (change)="uploadPhoto($event)" [(ngModel)]="prop.image" name="image" id="psw" value="Upload Photo">
+                            <small style="color: rgb(202, 147, 44);" id="materialRegisterFormPhoneHelpBlock"
+                                class="form-text text-muted mb-4">
+                                Upload photo
+                            </small>
+                        </div>
                     </div>
     
                     <div class="ml-5 col">

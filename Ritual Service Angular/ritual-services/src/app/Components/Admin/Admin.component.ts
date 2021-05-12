@@ -25,9 +25,9 @@ export class AdminComponent implements OnInit {
  
   part: string = "dashboard";
   formData: FormData = new FormData();
-
-  LogOut() {
-    this.router.navigate(['/']);
+  LogOut(){
+    this.userService.LogOut();    
+    this.router.navigate(['/account/login']); 
   }
   Edit(id: number) {
     this.part = "edit";
