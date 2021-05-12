@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Ritual_Services_Api.Models.Dto;
 using Ritual_Services_Api.Models.Dto.ResultDto;
 using Ritual_Services_Api.Models.Entities;
@@ -24,18 +25,26 @@ namespace Ritual_Services_Api.Controllers
 
         [HttpGet("{category}")]
         
-        public List<WareDto> GetWares([FromRoute]string name)
+        public ResultDto GetWares([FromRoute]string category)
         {
-            return _context.Wares.Select(w => new WareDto
+
+            return new CollectionResultDto<WareDto>
             {
-                Id = w.Id,
-                Name = w.Name,
-                Image = w.Image,
-                Price = w.Price,
-                Description = w.Description,
-                CategoryName=w.Category.Name
-            }).Where(w=>w.CategoryName==name).ToList();
-        }
+                Data = _context.Wares.Include(x => x.Category).Select(w => new WareDto
+                {
+                    Id = w.Id,
+                    Name = w.Name,
+                    Image = w.Image,
+                    Price = w.Price,
+                    Description = w.Description,
+                    CategoryName = w.Category.Name
+                }).Where(w => w.CategoryName == category).ToList(),
+                IsSuccessful = true
+            };
+        } 
+                
+                
+               
 
         [HttpPost("Add")]
         public ResultDto Add(WareDto dto)

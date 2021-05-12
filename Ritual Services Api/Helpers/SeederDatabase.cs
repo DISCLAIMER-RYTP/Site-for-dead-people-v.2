@@ -27,14 +27,17 @@ namespace Ritual_Services_Api.Helpers
         }
         private static void SeedUsers(UserManager<User> userManager, RoleManager<IdentityRole> roleManager,ApplicationContext context)
         {
-            context.Categories.Add(new Category {Name="Ritual-Stuff"});
-            context.Categories.Add(new Category { Name = "Memorial" });
-            context.Categories.Add(new Category { Name = "Crosses" });
-            context.Categories.Add(new Category { Name = "Wreaths" });
-            context.Categories.Add(new Category { Name = "Urns" });
-            context.Categories.Add(new Category { Name = "Coffins" });
+            //context.Categories.Add(new Category {Name="Ritual-Stuff"});
+            //context.Categories.Add(new Category { Name = "Memorial" });
+            //context.Categories.Add(new Category { Name = "Crosses" });
+            //context.Categories.Add(new Category { Name = "Wreaths" });
+           // context.Categories.Add(new Category { Name = "Urns" });
+            //context.Categories.Add(new Category { Name = "Coffins" });
 
             context.Wares.Add(new Ware { Name = "Crosses", Image = "ddd", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Ritual-Stuff") });
+           // context.Wares.Add(new Ware { Name = "War", Image = "dsffds", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Memorial") });
+
+
 
             context.SaveChanges();
 

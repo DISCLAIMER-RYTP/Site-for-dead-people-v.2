@@ -14,7 +14,7 @@ export class RitualStuffComponent implements OnInit {
   
   stuffs!: Array<WareDto>;
 
-  //category:string =localStorage.getItem("category"); 
+
 
 
   constructor(private WareSewrvice:WareService,
@@ -23,18 +23,19 @@ export class RitualStuffComponent implements OnInit {
  
    
   ngOnInit() {
-   // this.loadStuffsCategory();
+    this.loadStuffsCategory();
   }
 
-  //loadStuffsCategory(){
-    //this.WareSewrvice.getWareCategory(this.category).subscribe((res:any)=>{
-    //     if(res.isSuccessful){
-     //      console.log(res.data)
-    //       this.notifier.notify('success', 'OK')
-     //      this.stuffs=res.data;
-      //     console.log(res.data)
-     //    }
-    //});
- // }
+  loadStuffsCategory(){
+    this.WareSewrvice.getWareCategory("Ritual-Stuff").subscribe((res:ApiCollectionResponse)=>{
+        if(res.isSuccessful){
+          console.log(res.data)
+          this.notifier.notify('warning', 'Shop works!')
+          this.stuffs=res.data;
+          console.log(res.data)
+        }
+    });
+ }
+
 
 }

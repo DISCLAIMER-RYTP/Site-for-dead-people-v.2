@@ -27,7 +27,7 @@ export class WareService {
       return this.http.post<ApiResponse>('https://localhost:44339/api/ware/Update',book);
     }
 
-    getWareCategory(category:string): Observable<ApiResponse>{
-      return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware"+category);
+    getWareCategory(category:string): Observable<ApiCollectionResponse>{
+      return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware/"+category);
     }
 }

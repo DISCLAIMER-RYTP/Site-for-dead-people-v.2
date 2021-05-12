@@ -1,39 +1,23 @@
 <div class="body">
     <div class="my-5 margin-x">
         <div class="flex">
-            <div class="flex">
-                <div class="card-group" *ngFor="let stuff of stuffs">
-
-
-                    <mdb-card>
-                        <div class="view rgba-white-slight waves-black" mdbWavesEffect>
-                            <!-- Card img -->
-                            <mdb-card-img alt="Card image cap">{{stuff.image}}</mdb-card-img>
-                            <a>
-                                <div class="mask"></div>
-                            </a>
+            <div class="flex container" *ngFor="let stuff of stuffs">
+                <div class="row row-cols-1 row-cols-md-6 g-4">
+                    <div class="col">
+                      <div class="card">
+                        <img src="..." class="card-img-top" alt="..." >
+                        <div class="card-body">
+                          <h5 class="card-title">{{stuff.name}}</h5>
+                          <p class="card-text" >
+                            {{stuff.description}}
+                          </p>
+                          <p class="card-text" >
+                            {{stuff.price}}
+                          </p>
                         </div>
-                        <!--Card content-->
-                        <mdb-card-body>
-                            <!--Title-->
-                            <mdb-card-title>
-                                <h4>{{stuff.name}}</h4>
-                            </mdb-card-title>
-
-                            <!--Text-->
-                            <mdb-card-text>
-                                {{stuff.description}}
-                            </mdb-card-text>
-                            <p>{{stuff.price}}</p>
-
-                            <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-                        </mdb-card-body>
-                    </mdb-card>
-
-
-
-
-                </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
