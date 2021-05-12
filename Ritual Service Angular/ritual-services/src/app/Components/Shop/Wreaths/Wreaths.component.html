@@ -1,12 +1,52 @@
 <div class="body">
-  <div class="my-5 margin-x">
-      <div class="flex">
-        <div class="flex">
+    <div class="my-5 margin-x">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mx-8 my-5  " *ngFor="let wreath of wreaths" style=" text-align: center;">
+                <!--Card-->
+                <mdb-card [dark]="true">
 
+                    <!--Card image-->
+                    <div class="view overlay waves-light" mdbWavesEffect>
+                        <mdb-card-img>{{wreath.image}}</mdb-card-img>
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
 
+                    <!--Card content-->
+                    <mdb-card-body class="elegant-color  text-warning">
+                        <a class="activator px-3 mr-2">
 
-            
+                        </a>
+
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h4>{{wreath.name}}</h4>
+                        </mdb-card-title>
+
+                        <hr class="hr-light">
+
+                        <!--Text-->
+
+                        <mdb-card-text class="text-warning">
+                            {{wreath.description}}
+                        </mdb-card-text>
+                        <mdb-card-text class="text-warning">
+                            {{wreath.price}}
+                            <mdb-icon fas icon="dollar-sign"></mdb-icon>
+                        </mdb-card-text>
+
+                        <button mdbBtn type="button" color="warning" mdbWavesEffect>Buy
+                    <mdb-icon fas icon="cart-arrow-down"></mdb-icon>
+                  </button>
+
+                    </mdb-card-body>
+                    <!--/.Card content-->
+                </mdb-card>
+                <!--/.Card-->
+            </div>
+
         </div>
-     </div>
-   </div>
+    </div>
 </div>
