@@ -32,7 +32,9 @@ export class LoginComponent implements OnInit {
       console.log(res)
       if(res.isSuccessful){
         console.log(res)
+        localStorage.setItem("id",res.message)
         localStorage.setItem("token",res.token)
+        this.notifier.notify('success', ' Ok');
         this.router.navigate(['/account', {id: res.message}]); 
       }
       else{

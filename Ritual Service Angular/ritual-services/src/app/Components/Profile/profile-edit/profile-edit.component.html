@@ -1,22 +1,68 @@
-<div class="container">
-  <h1>Profile change</h1>
-  <hr>
-
-  <label for="psw"><b>Name</b></label>
-  <input [(ngModel)]="prop.fullName" type="text" placeholder="Enter name" name="psw" id="psw" required>
-
-  <label for="psw"><b>Age</b></label>
-  <input [(ngModel)]="prop.age" type="number" placeholder="Enter age" name="psw" id="psw" required>
- 
-  <label for="psw"><b>Phone</b></label>
-  <input [(ngModel)]="prop.phoneNumber" type="text" placeholder="Enter phone number" name="psw" id="psw" required>
+<div class="body">
+  <div class="log-form">
+    <mdb-card>
   
-  <label for="email"><b>Email</b></label>
-  <input [(ngModel)]="prop.email" type="text" placeholder="Enter Email" name="email" id="email" required>
-
-  <button type="submit" (click)="Edit()" class="registerbtn">Edit</button>
-</div>
-
-<div class="container signin">
-  <p>All right? <span (click)="Back()">Back</span>.</p>
+      <mdb-card-header class="warning-color black-text text-center py-4">
+        <h5>
+          <strong class="txt">Edit Profile</strong>
+        </h5>
+      </mdb-card-header>
+  
+      <mdb-card-body class=" px-lg-5 pt-0 div-prof">
+  
+        <form class="text-center" style="color: #212121; display: flex;">
+  
+          <div class="md-form">
+            <img src="https://localhost:44339/Images/maryna.png" width="100%" />
+          </div>
+  
+          <div class="ml-5">
+            <div class="form-row">
+              <div class="col">
+                <div class="md-form">
+                  <input [(ngModel)]="prop.fullName" name="fullName" type="text" id="materialRegisterFormFirstName" class="form-control"
+                    mdbInput >
+                  <label for="materialRegisterFormFirstName">Full Name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="md-form">
+                  <input type="number" name="age" [(ngModel)]="prop.age" id="materialRegisterFormLastName"
+                    class="form-control" mdbInput>
+                  <label for="materialRegisterFormLastName">Age</label>
+                </div>
+              </div>
+            </div>
+  
+            <div class="md-form mt-0">
+              <input type="email" name="email" [(ngModel)]="prop.email" id="materialRegisterFormEmail"
+                class="form-control" mdbInput>
+              <label for="materialRegisterFormEmail">E-mail</label>
+            </div>
+  
+            <div class="md-form">
+              <input type="text" name="phone" [(ngModel)]="prop.phone" id="materialRegisterFormPhone"
+                class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" mdbInput>
+              <label for="materialRegisterFormPhone">Phone number</label>
+              <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                Optional - for two-step authentication
+              </small>
+            </div>
+  
+            <button (click)="Edit()" mdbBtn color="elegant" [outline]="true" [rounded]="true"
+              class="my-4 waves-effect z-depth-0 btn btn-outline-light btn-rounded" mdbWavesEffect type="submit">Save Change</button>
+  
+            <div class="container signin">
+              <p style="color: whitesmoke;">All right? <span (click)="Back()">Back</span>.</p>
+            </div>
+          </div>
+  
+        </form>
+  
+      </mdb-card-body>
+  
+    </mdb-card>
+  
+  
+  </div>
 </div>

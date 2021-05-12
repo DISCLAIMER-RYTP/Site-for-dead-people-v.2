@@ -1,0 +1,38 @@
+<div class="body">
+    <div class="my-5 margin-x">
+        <div class="flex">
+            <div class="flex">
+                <div class="" style="animation-delay: 0.5s; visibility: visible; animation-name: fadeInDown;">
+                    <div class="text-center ">
+                        <h1 class="text-lg-left" style="text-align: justify; animation-delay: 0.5s; visibility: visible; animation-name: fadeInUp;">
+                            Funeral Menu
+                        </h1>
+                        <p>
+                            To help you choose a menu for a memorial dinner, we post on the site an average set of dishes that are ordered by customers who contact us to hold a wake
+                        </p>
+                    </div>
+                    <div>
+
+                        <table mdbTable style="border:1px solid orange;">
+                            <thead class="orange black-text">
+                                <tr>
+                                    <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="orange-text" mdbTableCol *ngFor=" let el of elements ">
+                                    <td>{{el.dish}}</td>
+                                    <td>{{el.portion}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotifierService } from 'angular-notifier';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ApiResponse, ApiSingleResponse } from 'src/app/Models/apiResponse';
 import { EditDto } from 'src/app/Models/loginDto';
 import { AccountService } from 'src/app/Service/account.service';
 import { ApiService } from 'src/app/Service/api.service';
@@ -25,12 +24,13 @@ export class ProfileComponent implements OnInit {
       id: "-1",
       fullName: 'a',
       age: 1,
-      phoneNumber: 'a',
+      phone: 'a',
       email:'a',
       image: 'Image'
     };
   
     id: any;
+    path:string='https://localhost:44339/Images/';
 
     ngOnInit() {
       this.id = this.route.snapshot.paramMap.get('id');
@@ -48,7 +48,7 @@ export class ProfileComponent implements OnInit {
     }
   
     Edit() {
-      this.router.navigate(['account//edit', { id: this.id }]);
+      this.router.navigate(['/account/edit', { id: this.id }]);
     }
   
 

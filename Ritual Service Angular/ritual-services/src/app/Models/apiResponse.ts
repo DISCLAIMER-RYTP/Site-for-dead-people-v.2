@@ -8,5 +8,9 @@ export class ApiCollectionResponse extends ApiResponse{
 }
 
 export class ResultLoginDto extends ApiResponse{
-         token!: string ;
+         token!: string;
+    }
+    
+ export class ApiSingleResponse extends ApiResponse{
+        data!: any;
     }

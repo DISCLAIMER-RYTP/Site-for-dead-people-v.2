@@ -1,0 +1,26 @@
+.reg-form {
+    margin: 2% 35vw auto 35vw;
+    opacity: 0.9;
+}
+
+.div-prof{
+    color: whitesmoke;
+    background-color:black;
+}
+
+.body{
+    height: 95%;
+    width: 100%;
+    background-image: url("../../../../assets/Image/main-background-1.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.txt {
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: cursive;
+}

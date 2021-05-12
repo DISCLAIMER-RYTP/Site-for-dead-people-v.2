@@ -1,0 +1,28 @@
+.body {
+    height: 110%;
+    color: rgb(202, 147, 44);
+    background-image: url("../../../../../assets/Image/bg8.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+.margin-x {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.flex {
+    display: flex;
+}
+
+p {
+    font-size: large;
+    margin-bottom: 2%;
+}

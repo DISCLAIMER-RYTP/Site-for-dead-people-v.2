@@ -1,0 +1,47 @@
+.head-img{
+    text-align: center;
+    height: 100%;
+}
+
+.body{
+    color: rgb(202, 147, 44);
+    background-color:#2E2E2E;
+    -webkit-background-size: cover;
+    -moz-background-size:  cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.bag1 {
+    width: 100%;
+    height: 10%;
+}
+
+h2{
+    text-align: center;
+}
+
+.min-img{
+    height: 30%;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.img-div{
+    width: 25%;
+}
+
+.margin-x{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.flex{
+    display: flex;
+}
+
+p{
+    font-size: large;
+}

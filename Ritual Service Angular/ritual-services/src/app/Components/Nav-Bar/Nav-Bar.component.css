@@ -1,3 +1,10 @@
-.main-nav{
-    font-size: 17px;
+.nav-bar{
+    font-size: 20px;
+    padding: 10px;
 }
+
+.navs-comp:hover{
+  background-color: #212121;
+  
+}
+

@@ -22,7 +22,7 @@ export class ProfileEditComponent implements OnInit {
       id: "-1",
       fullName: 'a',
       age: 1,
-      phoneNumber: 'a',
+      phone: 'a',
       email:'a',
       image: 'Image'
     };
