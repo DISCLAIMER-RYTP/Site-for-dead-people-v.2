@@ -34,9 +34,13 @@ namespace Ritual_Services_Api.Helpers
            // context.Categories.Add(new Category { Name = "Urns" });
             //context.Categories.Add(new Category { Name = "Coffins" });
 
-            context.Wares.Add(new Ware { Name = "Crosses", Image = "ddd", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Ritual-Stuff") });
-           // context.Wares.Add(new Ware { Name = "War", Image = "dsffds", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Memorial") });
+           // context.Wares.Add(new Ware { Name = "Crosses", Image = "Images/maryna.png", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Ritual-Stuff") });
+            //context.Wares.Add(new Ware { Name = "Crosses", Image = "ddd", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Ritual-Stuff") });
+            //context.Wares.Add(new Ware { Name = "Crosses", Image = "ddd", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Ritual-Stuff") });
 
+             context.Wares.Add(new Ware { Name = "War", Image = "dsffds", Price = 213, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Memorial") });
+
+            context.Wares.Add(new Ware { Name = "Pink", Image = "dsffds", Price = 21312, Description = "sdfsdfsdfsdf", Category = context.Categories.FirstOrDefault(x => x.Name == "Crosses") });
 
 
             context.SaveChanges();

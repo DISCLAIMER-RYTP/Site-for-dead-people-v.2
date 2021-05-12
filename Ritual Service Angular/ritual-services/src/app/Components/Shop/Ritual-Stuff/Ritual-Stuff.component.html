@@ -1,23 +1,54 @@
 <div class="body">
-    <div class="my-5 margin-x">
-        <div class="flex">
-            <div class="flex container" *ngFor="let stuff of stuffs">
-                <div class="row row-cols-1 row-cols-md-6 g-4">
-                    <div class="col">
-                      <div class="card">
-                        <img src="..." class="card-img-top" alt="..." >
-                        <div class="card-body">
-                          <h5 class="card-title">{{stuff.name}}</h5>
-                          <p class="card-text" >
-                            {{stuff.description}}
-                          </p>
-                          <p class="card-text" >
-                            {{stuff.price}}
-                          </p>
-                        </div>
-                      </div>
+    <div class=" margin-x ">
+
+
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mx-8 my-5 " *ngFor="let stuff of stuffs" style=" text-align: center;">
+                <!--Card-->
+                <mdb-card [dark]="true">
+
+                    <!--Card image-->
+                    <div class="view overlay waves-light" mdbWavesEffect>
+                        <mdb-card-img>{{stuff.image}}</mdb-card-img>
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
                     </div>
-                  </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <mdb-card-body class="elegant-color white-text">
+                        <a class="activator px-3 mr-2">
+
+                        </a>
+
+                        <!--Title-->
+                        <mdb-card-title>
+                            <h4>{{stuff.name}}</h4>
+                        </mdb-card-title>
+
+                        <hr class="hr-light">
+
+                        <!--Text-->
+
+                        <mdb-card-text class="white-text">
+                            {{stuff.description}}
+                        </mdb-card-text>
+                        <mdb-card-text class="white-text">
+                            {{stuff.price}}
+                            <mdb-icon fas icon="dollar-sign"></mdb-icon>
+                        </mdb-card-text>
+
+                        <button mdbBtn type="button" color="warning" mdbWavesEffect>Buy
+                          <mdb-icon fas icon="cart-arrow-down"></mdb-icon>
+                        </button>
+
+                    </mdb-card-body>
+                    <!--/.Card content-->
+                </mdb-card>
+                <!--/.Card-->
             </div>
+
         </div>
     </div>
+</div>

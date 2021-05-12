@@ -1,5 +1,5 @@
 .body {
-    height: 100%;
+    height: auto;
     color: rgb(202, 147, 44);
     background-image: url("../../../../assets/Image/00.jpg");
     -webkit-background-size: cover;
@@ -31,9 +31,9 @@ p {
     margin-bottom: 2%;
 }
 
-.cards{
+.cards {
     background-color: #2E2E2E;
     margin: 5%;
-    width:30vh;
+    width: 30vh;
     text-align: center;
 }
