@@ -9,6 +9,7 @@ namespace Ritual_Services_Api.Models.Entities.Idemtity
     {
        public int Id { get; set; }
        public int Price { get; set; }
-
+        public User User { get; set; }
+        public CategoryOrder Category { get; set; }
     }
 }

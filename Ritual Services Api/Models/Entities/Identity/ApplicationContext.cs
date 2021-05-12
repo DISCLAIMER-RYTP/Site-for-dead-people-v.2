@@ -21,6 +21,15 @@ namespace Ritual_Services_Api.Models.Entities.Identity
                 .WithOne(u => u.User)
                 .HasForeignKey<UserAdditionalInfo>();
 
+            builder.Entity<FuneralOrder>()
+               .HasOne(f => f.Category)
+               .WithMany(c => c.FuneralOrders);
+
+            builder.Entity<FuneralOrder>()
+                .HasOne(f => f.User)
+                .WithMany(c => c.Orders);
+
+
             base.OnModelCreating(builder);
         }
 

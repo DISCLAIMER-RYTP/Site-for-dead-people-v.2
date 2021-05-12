@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ritual_Services_Api.Models.Dto;
 using Ritual_Services_Api.Models.Dto.ResultDto;
@@ -41,6 +42,7 @@ namespace Ritual_Services_Api.Controllers
             };
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public ResultDto DeleteEmployees(int id)
         {
@@ -77,6 +79,7 @@ namespace Ritual_Services_Api.Controllers
         }
 
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("Add")]
         public ResultDto AddEmployees([FromBody]EmployeesDto dto)
@@ -122,6 +125,7 @@ namespace Ritual_Services_Api.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("Update")]
         public ResultDto UpdateEmployees([FromBody] EmployeesDto dto)

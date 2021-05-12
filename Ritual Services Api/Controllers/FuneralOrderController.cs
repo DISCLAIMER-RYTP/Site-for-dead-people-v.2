@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ritual_Services_Api.Models.Dto;
@@ -32,6 +33,7 @@ namespace Ritual_Services_Api.Controllers
             }).ToList();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("Add")]
         public ResultDto Add(FuneralOrderDto dto)
         {
@@ -60,6 +62,7 @@ namespace Ritual_Services_Api.Controllers
         }
 
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public ResultDto Delete(int id)
         {
@@ -95,6 +98,7 @@ namespace Ritual_Services_Api.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("Update")]
         public ResultDto Edit([FromBody] WareDto dto)
         {

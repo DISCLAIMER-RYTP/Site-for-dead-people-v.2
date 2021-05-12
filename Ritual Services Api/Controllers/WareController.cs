@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -41,11 +42,12 @@ namespace Ritual_Services_Api.Controllers
                 }).Where(w => w.CategoryName == category).ToList(),
                 IsSuccessful = true
             };
-        } 
-                
-                
-               
+        }
 
+
+
+
+        [Authorize(Roles = "Admin")]
         [HttpPost("Add")]
         public ResultDto Add(WareDto dto)
         {
@@ -77,6 +79,7 @@ namespace Ritual_Services_Api.Controllers
         }
 
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public ResultDto Delete(int id)
         {
@@ -112,6 +115,7 @@ namespace Ritual_Services_Api.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("Update")]
         
         public ResultDto Edit([FromBody] WareDto dto)

@@ -4,7 +4,6 @@ import { NotifierService } from 'angular-notifier';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { EditDto } from 'src/app/Models/loginDto';
 import { AccountService } from 'src/app/Service/account.service';
-import { ApiService } from 'src/app/Service/api.service';
 
 @Component({
   selector: 'app-profile',

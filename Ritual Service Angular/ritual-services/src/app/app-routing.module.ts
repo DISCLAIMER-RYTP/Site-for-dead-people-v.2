@@ -36,6 +36,8 @@ import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFun
 import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
 import { DinnerComponent } from './Components/Restaurants/funeral dinner/dinner/dinner.component';
 import { MenuComponent } from './Components/Restaurants/funeral menu/menu/menu.component';
+import { AdminComponent } from './Components/Admin/Admin.component';
+import { AdminGuard } from './Guards/admin.guards';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -96,7 +98,8 @@ const routes: Routes = [
         { path: 'memorial', component: MemorialComponent },
         { path: 'urns', component: UrnsComponent },
         { path: 'wreaths', component: WreathsComponent }
-      ]}
+      ]},
+      {path: 'admin', component:AdminComponent, canActivate:[AdminGuard]}
 ];
 
 @NgModule({

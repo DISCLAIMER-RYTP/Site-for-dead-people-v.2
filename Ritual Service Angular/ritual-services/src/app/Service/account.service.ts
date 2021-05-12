@@ -22,6 +22,43 @@ export class AccountService {
     return this.http.post<ApiResponse>('https://localhost:44339/api/account/login', user);
   }
 
+  isLoggedIn() {
+    const token = localStorage.getItem('token');
+    if (token != null) {
+      const jwtData = token.split('.')[1];
+      const decodedJwtJsonData = window.atob(jwtData);
+      const decodedJwtData = JSON.parse(decodedJwtJsonData);
+      if (decodedJwtData.roles != null) {
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+  isAdmin() {
+    const token = localStorage.getItem('token');
+    if (token != null) {
+      const jwtData = token.split('.')[1];
+      const decodedJwtJsonData = window.atob(jwtData);
+      const decodedJwtData = JSON.parse(decodedJwtJsonData);
+      if (decodedJwtData.roles[0] == "Admin") {
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+
   UploadPhoto(id: number, file: FormData):  Observable<ApiResponse> {
     this.headers.append('Content-Type', 'multipart/form-data');
     return this.http.post<ApiResponse>('https://localhost:44339/api/image/UploadImage/'+id, file, {headers: this.headers})

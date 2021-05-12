@@ -9,6 +9,6 @@ namespace Ritual_Services_Api.Models.Entities.Identity
     public class User : IdentityUser
     {
         public virtual UserAdditionalInfo UserAdditionalInfo { get; set; }
-        
+        public ICollection<FuneralOrder> Orders { get; set; }
     }
 }

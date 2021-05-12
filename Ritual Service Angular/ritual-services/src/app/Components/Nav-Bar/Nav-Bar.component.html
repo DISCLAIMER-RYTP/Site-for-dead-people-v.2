@@ -104,7 +104,7 @@
 
         </ul>
 
-        <ul class="navbar-nav ml-auto nav-flex-icons">
+        <ul *ngIf="!IsLoggedIn"  class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item">
                 <a class="nav-link">
                     <mdb-icon style="color: rgb(202, 147, 44);" fab icon="twitter"></mdb-icon>
@@ -130,6 +130,29 @@
                                 <mdb-icon fas icon="registered"></mdb-icon>Register
                             </a>
 
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul *ngIf="IsLoggedIn"  class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <div class="navbar-right navbar-text">
+                    <span class="profile" [routerLink]="['/profile']">{{email}}</span>
+                </div>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <div class="btn-group" mdbDropdown>
+                        <mdb-icon fas icon="user" style="color: rgb(202, 147, 44);" mdbDropdownToggle></mdb-icon>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-primary elegant-color            ">
+                            <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" [routerLink]="['/account']">
+                                <mdb-icon fas icon="user"></mdb-icon>Profile
+                            </a>
+                            <a class="dropdown-item navs-comp" style="color: rgb(202, 147, 44);" (click)="LogOut()" [routerLink]="['/account']">
+                                <mdb-icon fas icon="sign-in-alt"></mdb-icon>Log Out
+                            </a>
                         </div>
                     </div>
                 </a>
