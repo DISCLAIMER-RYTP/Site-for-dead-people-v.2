@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Ritual_Services_Api.Models.Entities.Idemtity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

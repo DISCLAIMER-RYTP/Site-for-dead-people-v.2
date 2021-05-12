@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <div class="contact-page">
+
     <div class="flex">
         <div class="flex">
             <section class="contact-section my-5 ">
@@ -141,6 +142,25 @@
 
             </section>
             <!-- Section: Contact v.3 -->
+        </div>
+    </div>
+
+    <div class="flex" style="margin-left: 15%; max-width: 70%; max-height: 30%;">
+    
+        <div *ngFor="let e of prop" class="flip-card mx-2 ">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div>
+                        <img src="{{path}}{{e.image}}" alt="Avatar" style="width:100%; padding: 5%;">
+                        <h1>{{e.fullName}}</h1>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h4>{{e.description}}</h4>
+                    <p>{{e.position}}</p>
+                    <p>{{e.phone}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
