@@ -55,10 +55,10 @@ a:visited {
 }
 html,body {
 	font-family:'Verdana',serif!important;
-	background:#000 
+	background:#000
 }
 .main {
-	background:url(../../../../assets/Image/Services/whiteplaster.png) 
+	background:url(https://img3.akspic.ru/previews/0/9/8/6/0/106890/106890-uzor-smola-nebo-asfalt-monohromnyj-550x310.jpg);
 }
 .head-top {
 	margin:20px 0 
@@ -75,7 +75,7 @@ a:link {
 	padding-top:214px 
 }
 .w-service {
-	background:url(../../../../assets/Image/Services/whiteplaster.png) 
+	background:url(https://img3.akspic.ru/previews/0/9/8/6/0/106890/106890-uzor-smola-nebo-asfalt-monohromnyj-550x310.jpg);
 }
 .b-service {
 	background:url(../../../../assets/Image/Services/grunge.png) 
@@ -108,12 +108,12 @@ a:link {
 }
 .w-text h2 a,.content-title h2 a {
 	font-size:24px;
-	color:#414141;
+	color:#adadad;
 	font-weight:800;
-	text-shadow:#fff 1px 1px 1px 
+	text-shadow:rgb(0, 0, 0) 1px 1px 1px 
 }
 .ws-descr,.calendar-desc,.deadman-desc {
-	color:#777;
+	color:rgb(255, 255, 255);
 	text-align:justify;
 	line-height:20px;
 	font-size:12px 
