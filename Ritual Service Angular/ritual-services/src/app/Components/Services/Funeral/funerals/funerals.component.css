@@ -23,6 +23,10 @@
     margin-left: 15px!important;
 }
 
+.flx{
+    /*display: flex;*/
+}
+
 
 .funeral_1:before {
     content: url(../../../../../assets/Image/tools/person.png);
@@ -141,4 +145,27 @@
 .bag1 {
     width: 100%;
     height: 10%;
+}
+
+
+.order-btn{
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 75px;
+    height: 35px;
+    border-color: rgb(177, 88, 0);
+    border-style: solid;
+    background-color: transparent;
+    color: black;
+    float: right;
+    margin-top: -32px;
+    border-width: 2px;
+    transition: 0.3s;
+}
+
+.order-btn:hover{
+    border-color: transparent;
+    background-color: rgb(177, 88, 0);
+    transition: 0.3s;
 }
