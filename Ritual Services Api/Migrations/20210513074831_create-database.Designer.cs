@@ -10,7 +10,7 @@ using Ritual_Services_Api.Models.Entities.Identity;
 namespace Ritual_Services_Api.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210415132018_create-database")]
+    [Migration("20210513074831_create-database")]
     partial class createdatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -162,8 +162,8 @@ namespace Ritual_Services_Api.Migrations
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Marks")
-                        .HasColumnType("int");
+                    b.Property<string>("Marks")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -185,17 +185,67 @@ namespace Ritual_Services_Api.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Idemtity.FuneralOrder", b =>
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.CategoryOrder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CategoryOrders");
+                });
+
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Employees", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Position")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Idemtity.FuneralOrder", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("FuneralOrders");
                 });
@@ -305,6 +355,21 @@ namespace Ritual_Services_Api.Migrations
                     b.ToTable("PlaceCemetaries");
                 });
 
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.RequestOrder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Requests")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RequestOrders");
+                });
+
             modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Ware", b =>
                 {
                     b.Property<int>("Id")
@@ -385,6 +450,29 @@ namespace Ritual_Services_Api.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Idemtity.FuneralOrder", b =>
+                {
+                    b.HasOne("Ritual_Services_Api.Models.Entities.CategoryOrder", "Category")
+                        .WithMany("FuneralOrders")
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("Ritual_Services_Api.Models.Entities.RequestOrder", "Request")
+                        .WithOne("Order")
+                        .HasForeignKey("Ritual_Services_Api.Models.Entities.Idemtity.FuneralOrder", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Ritual_Services_Api.Models.Entities.Identity.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Request");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Identity.UserAdditionalInfo", b =>
                 {
                     b.HasOne("Ritual_Services_Api.Models.Entities.Identity.User", "User")
@@ -410,9 +498,22 @@ namespace Ritual_Services_Api.Migrations
                     b.Navigation("Wares");
                 });
 
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.CategoryOrder", b =>
+                {
+                    b.Navigation("FuneralOrders");
+                });
+
             modelBuilder.Entity("Ritual_Services_Api.Models.Entities.Identity.User", b =>
                 {
+                    b.Navigation("Orders");
+
                     b.Navigation("UserAdditionalInfo");
+                });
+
+            modelBuilder.Entity("Ritual_Services_Api.Models.Entities.RequestOrder", b =>
+                {
+                    b.Navigation("Order")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -7,10 +7,12 @@
   
   }
   
-  i.pink-item {
-    color: #f4425c !important;
-  }
-  
+ .btn{
+   text-align: center;
+  color: #2E2E2E; 
+  background-color: rgb(202, 147, 44);
+ }
+
   form.sidebar-form {
     margin: 5px;
   }
@@ -18,7 +20,7 @@
   div.page-announce {
     min-height: 175px;
     height: auto;
-    background-color: #f4425c;
+    background-color: rgb(202, 147, 44);;
     padding: 40px;
     margin-bottom: 10px;
   }
@@ -44,22 +46,6 @@
   
   .material-tooltip {
     display: hidden;
-  }
-  
-  .bg-aqua {
-    background-color: #00c0ef !important;
-  }
-  
-  .bg-green {
-    background-color: #00a65a !important;
-  }
-  
-  .bg-yellow {
-    background-color: #f39c12 !important;
-  }
-  
-  .bg-red {
-    background-color: #dd4b39 !important;
   }
   
   .small-box {
@@ -112,7 +98,7 @@
   
   .page-footer {
     padding-top: 0 !important;
-    background-color: #f4425c;
+    background-color: rgb(202, 147, 44);;
     margin-top: 20px;
   }
   

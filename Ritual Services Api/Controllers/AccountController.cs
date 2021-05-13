@@ -43,6 +43,24 @@ namespace Ritual_Services_Api.Controllers
             _appEnvironment = appEnvironment;
             _jwtTokenService = jwtTokenService;
         }
+        [HttpGet("Users")]
+        public ResultDto GetUsers()
+        {
+            var users = ctx.UserAdditionalInfos.Select(c => new UserDto()
+            {
+                Id = c.Id,
+                FullName = c.FullName,
+                Phone = c.User.PhoneNumber,
+                Email = c.User.Email,
+                Age = c.Age,
+                Image = c.Image
+            }).ToList();
+            return new CollectionResultDto<UserDto>
+            {
+                IsSuccessful = true,
+                Data = users
+            };
+        }
 
         [HttpGet("Profile")]
         public ResultDto GetUser( string id)

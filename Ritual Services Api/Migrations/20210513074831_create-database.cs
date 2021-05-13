@@ -53,7 +53,7 @@ namespace Ritual_Services_Api.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Brand = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Marks = table.Column<int>(type: "int", nullable: false)
+                    Marks = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,16 +74,33 @@ namespace Ritual_Services_Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FuneralOrders",
+                name: "CategoryOrders",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FuneralOrders", x => x.Id);
+                    table.PrimaryKey("PK_CategoryOrders", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Employees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Position = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Employees", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -99,6 +116,19 @@ namespace Ritual_Services_Api.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PlaceCemetaries", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RequestOrders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Requests = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RequestOrders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -250,6 +280,38 @@ namespace Ritual_Services_Api.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "FuneralOrders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CategoryId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FuneralOrders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FuneralOrders_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_FuneralOrders_CategoryOrders_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "CategoryOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_FuneralOrders_RequestOrders_Id",
+                        column: x => x.Id,
+                        principalTable: "RequestOrders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -290,6 +352,16 @@ namespace Ritual_Services_Api.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_FuneralOrders_CategoryId",
+                table: "FuneralOrders",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_FuneralOrders_UserId",
+                table: "FuneralOrders",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Wares_CategoryId",
                 table: "Wares",
                 column: "CategoryId");
@@ -316,6 +388,9 @@ namespace Ritual_Services_Api.Migrations
                 name: "Cars");
 
             migrationBuilder.DropTable(
+                name: "Employees");
+
+            migrationBuilder.DropTable(
                 name: "FuneralOrders");
 
             migrationBuilder.DropTable(
@@ -329,6 +404,12 @@ namespace Ritual_Services_Api.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "CategoryOrders");
+
+            migrationBuilder.DropTable(
+                name: "RequestOrders");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse, ApiSingleResponse, ResultLoginDto } from '../Models/apiResponse';
+import { ApiCollectionResponse, ApiResponse, ApiSingleResponse, ResultLoginDto } from '../Models/apiResponse';
 import { RegisterDto } from 'src/app/Models/registerDto';
 import { EditDto, LoginDto } from 'src/app/Models/loginDto';
 
@@ -73,6 +73,10 @@ export class AccountService {
 
   getUser(id: string):  Observable<ApiResponse> {
     return this.http.get<ApiSingleResponse>('https://localhost:44339/api/account/Profile?id=' + id);
+  }
+
+  getUsers():  Observable<ApiResponse> {
+    return this.http.get<ApiCollectionResponse>('https://localhost:44339/api/account/Users');
   }
 
   editUser(x: EditDto):  Observable<ApiResponse> {

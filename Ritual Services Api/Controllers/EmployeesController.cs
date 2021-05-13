@@ -42,7 +42,6 @@ namespace Ritual_Services_Api.Controllers
             };
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public ResultDto DeleteEmployees(int id)
         {
@@ -78,8 +77,6 @@ namespace Ritual_Services_Api.Controllers
             }
         }
 
-
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("Add")]
         public ResultDto AddEmployees([FromBody]EmployeesDto dto)
