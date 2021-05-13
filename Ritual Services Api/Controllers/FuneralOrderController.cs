@@ -26,14 +26,14 @@ namespace Ritual_Services_Api.Controllers
         [HttpGet]
         public List<FuneralOrderDto> GetFuneralOrders()
         {
-            return _context.Wares.Select(f => new FuneralOrderDto
+            return _context.FuneralOrders.Select(f => new FuneralOrderDto
             {
                 Id = f.Id,
                 Price = f.Price
             }).ToList();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "User")]
         [HttpPost("Add")]
         public ResultDto Add(FuneralOrderDto dto)
         {
@@ -41,7 +41,9 @@ namespace Ritual_Services_Api.Controllers
             {
                 FuneralOrder funOr = new FuneralOrder ()
                 {
-                    Price = dto.Price
+                    Price = dto.Price,
+                    User = _context.Users.FirstOrDefault(u => u.Id == dto.UserId),
+                    Category = _context.CategoryOrders.FirstOrDefault(c=> c.Name == dto.CategoryName)
                 };
                 _context.FuneralOrders.Add(funOr);
                 _context.SaveChangesAsync();

@@ -10,6 +10,6 @@ namespace Ritual_Services_Api.Models.Dto
         public int Id { get; set; }
         public int Price { get; set; }
         public string CategoryName { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

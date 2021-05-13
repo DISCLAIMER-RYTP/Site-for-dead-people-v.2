@@ -30,6 +30,12 @@ namespace Ritual_Services_Api.Models.Entities.Identity
                 .WithMany(c => c.Orders);
 
 
+            builder.Entity<FuneralOrder>()
+                .HasOne(f => f.Request)
+                .WithOne(c => c.Order)
+                .HasForeignKey<FuneralOrder>();
+
+
             base.OnModelCreating(builder);
         }
 
@@ -40,6 +46,8 @@ namespace Ritual_Services_Api.Models.Entities.Identity
         public DbSet<Employees> Employees { get; set; }
 
         public DbSet<FuneralOrder> FuneralOrders { get; set; }
+        public DbSet<CategoryOrder> CategoryOrders { get; set; }
+        public DbSet<RequestOrder> RequestOrders { get; set; }
 
 
     }

@@ -1,8 +1,8 @@
 .log-form {
-    width: 50%;
+    width: 30%;
     height: 50%;
-    margin-left: 25%;
-    margin-top: 3%;
+    margin-left: 35%;
+    margin-top: 10%;
     opacity: 0.85;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .body{
-    height: 95%;
+    height: 94%;
     width: 100%;
     background-image: url("../../../../assets/Image/main-background-1.jpeg");
     -webkit-background-size: cover;
@@ -26,4 +26,8 @@
     margin-top: 20px;
     font-size: 30px;
     font-family: cursive;
+}
+
+input, label{
+    color: rgb(202, 147, 44);
 }
