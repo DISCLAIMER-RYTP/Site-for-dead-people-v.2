@@ -24,6 +24,7 @@ namespace Ritual_Services_Api.Helpers
                 var context = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
                 SeedUsers(manager, managerRole,context);
 
+
             }
         }
         private static void SeedUsers(UserManager<User> userManager, RoleManager<IdentityRole> roleManager,ApplicationContext context)
