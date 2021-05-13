@@ -36,11 +36,12 @@ import { MuslimFuneralsComponent } from './Components/Services/Funeral/muslimFun
 import { OrthodoxFuneralsComponent } from './Components/Services/Funeral/orthodoxFunerals/orthodoxFunerals.component';
 import { DinnerComponent } from './Components/Restaurants/funeral dinner/dinner/dinner.component';
 import { MenuComponent } from './Components/Restaurants/funeral menu/menu/menu.component';
+import { ErrorPageComponent } from './Components/ErrorPage/ErrorPage.component'
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path:'contact',component:ContactComponent},
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   {
     path: 'account',
     children: [
@@ -51,52 +52,61 @@ const routes: Routes = [
     ]
   },
   {
-    path:'restaurant',
-    children:[
-      {path:'funeral-dinner',component:DinnerComponent},
-      {path:'funeral-menu',component:MenuComponent}
+    path: 'restaurant',
+    children: [
+      { path: 'funeral-dinner', component: DinnerComponent },
+      { path: 'funeral-menu', component: MenuComponent }
     ]
   },
   {
     path: 'service',
     children: [
-      { path: '', component: ServiceComponent},
-      { path: 'after-funeral', component: AfterFuneralServiceComponent},
+      { path: '', component: ServiceComponent },
+      { path: 'after-funeral', component: AfterFuneralServiceComponent },
       { path: 'farewel-hall', component: FarewellHallComponent },
       { path: 'org-memorial', component: OrganizationMemorialServiceComponent },
-      { path: 'prep-deceased', component: PreparationDeceasedComponent},
-      { path: 'rental-ritual-acces', component: RentalRitualAccessoriesComponent},
+      { path: 'prep-deceased', component: PreparationDeceasedComponent },
+      { path: 'rental-ritual-acces', component: RentalRitualAccessoriesComponent },
       { path: 'ritual-agent', component: RitualAgentComponent },
-      { path: 'suport-crew', component: SupportCrewsComponent},
-      { path: 'transport-deceased', component: TransportationDeceasedComponent},
-      {path: 'place-cemetery',
-      children: [
-        { path: '', component: PlaceCemeteryComponent },
-        { path: 'add', component: PlaceCemeteryAddComponent },
-        { path: 'edit', component: PlaceCemeteryUpdateComponent }
-      ]},
-      {path: 'funeral',
-      children: [
-        { path: '', component: FuneralsComponent },
-        { path: 'civil', component: CivilFuneralsComponent },
-        { path: 'elite', component: EliteFuneralsComponent },
-        { path: 'jewish', component: JewishFuneralsComponent },
-        { path: 'military', component: MilitaryFuneralsComponent },
-        { path: 'muslim', component: MuslimFuneralsComponent },
-        { path: 'orthodox', component: OrthodoxFuneralsComponent }
-      ]}
+      { path: 'suport-crew', component: SupportCrewsComponent },
+      { path: 'transport-deceased', component: TransportationDeceasedComponent },
+      {
+        path: 'place-cemetery',
+        children: [
+          { path: '', component: PlaceCemeteryComponent },
+          { path: 'add', component: PlaceCemeteryAddComponent },
+          { path: 'edit', component: PlaceCemeteryUpdateComponent }
+        ]
+      },
+      {
+        path: 'funeral',
+        children: [
+          { path: '', component: FuneralsComponent },
+          { path: 'civil', component: CivilFuneralsComponent },
+          { path: 'elite', component: EliteFuneralsComponent },
+          { path: 'jewish', component: JewishFuneralsComponent },
+          { path: 'military', component: MilitaryFuneralsComponent },
+          { path: 'muslim', component: MuslimFuneralsComponent },
+          { path: 'orthodox', component: OrthodoxFuneralsComponent }
+        ]
+      }
     ]
   },
-      {path: 'shop',
-      children: [
-        { path: '', component: ShopComponent },
-        { path: 'ritual-stuff', component: RitualStuffComponent },
-        { path: 'crosses', component: CrossesComponent },
-        { path: 'coffins', component: CoffinsComponent },
-        { path: 'memorial', component: MemorialComponent },
-        { path: 'urns', component: UrnsComponent },
-        { path: 'wreaths', component: WreathsComponent }
-      ]}
+  {
+    path: 'shop',
+    children: [
+      { path: '', component: ShopComponent },
+      { path: 'ritual-stuff', component: RitualStuffComponent },
+      { path: 'crosses', component: CrossesComponent },
+      { path: 'coffins', component: CoffinsComponent },
+      { path: 'memorial', component: MemorialComponent },
+      { path: 'urns', component: UrnsComponent },
+      { path: 'wreaths', component: WreathsComponent }
+    ]
+  },
+  {
+    path: '**', component: ErrorPageComponent
+  }
 ];
 
 @NgModule({

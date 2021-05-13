@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    font-size: 75px;
+    color: orange;
+    text-align: center;
+  }
+  
+  .main-txt{
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
