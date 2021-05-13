@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
+    "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
   },
   "projects": {
-    "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
+    "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
         "projectName": "Ritual Services Api",
-        "projectPath": "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\Matv_tj8m\\.nuget\\packages\\",
-        "outputPath": "D:\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Matv_tj8m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
