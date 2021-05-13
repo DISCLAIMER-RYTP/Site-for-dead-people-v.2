@@ -44,10 +44,27 @@ namespace Ritual_Services_Api.Controllers
             };
         }
 
+        [HttpGet("getCategory")]
+        public ResultDto GetCategories()
+        {
+            var r = _context.Categories.Select(x => new CategoryDto
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).ToList();
+            return new CollectionResultDto<CategoryDto>
+            {
+
+                Data = r, IsSuccessful=true
+
+            };
+        }
+
+        
 
 
 
-        [Authorize(Roles = "Admin")]
+
         [HttpPost("Add")]
         public ResultDto Add(WareDto dto)
         {
@@ -58,7 +75,8 @@ namespace Ritual_Services_Api.Controllers
                     Name = dto.Name,
                     Image = dto.Image,
                     Price = dto.Price,
-                    Description = dto.Description
+                    Description = dto.Description,
+                    Category = _context.Categories.FirstOrDefault(x=>x.Name==dto.CategoryName)
                 };
                 _context.Wares.Add(ware);
                 _context.SaveChangesAsync();

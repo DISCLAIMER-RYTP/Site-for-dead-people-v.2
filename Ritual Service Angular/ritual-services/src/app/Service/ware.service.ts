@@ -30,4 +30,10 @@ export class WareService {
     getWareCategory(category:string): Observable<ApiCollectionResponse>{
       return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware/"+category);
     }
+
+    getCategory(): Observable<ApiCollectionResponse>{
+      return this.http.get<ApiCollectionResponse>("https://localhost:44339/api/ware/getCategory");
+    }
+
+    
 }

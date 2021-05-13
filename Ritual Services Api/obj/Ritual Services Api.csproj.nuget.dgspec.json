@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
+    "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {}
   },
   "projects": {
-    "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
+    "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
         "projectName": "Ritual Services Api",
-        "projectPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
-        "packagesPath": "C:\\Users\\nasar\\.nuget\\packages\\",
-        "outputPath": "D:\\CourseWork_Angular\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\Ritual Services Api.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\dead\\Site-for-dead-people-v.2\\Ritual Services Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nasar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -95,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

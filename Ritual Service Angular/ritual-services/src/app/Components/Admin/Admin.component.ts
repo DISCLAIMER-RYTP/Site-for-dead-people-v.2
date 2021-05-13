@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotifierService } from 'angular-notifier';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ApiResponse } from 'src/app/Models/apiResponse';
+import { ApiCollectionResponse, ApiResponse } from 'src/app/Models/apiResponse';
 import { EmployersDto } from 'src/app/Models/employersDto';
 import { EditDto } from 'src/app/Models/loginDto';
+import { WareDto } from 'src/app/Models/wareDto';
 import { AccountService } from 'src/app/Service/account.service';
 import { AdminService } from 'src/app/Service/admin.service';
 import { EmployeesService } from 'src/app/Service/employees.service';
@@ -69,9 +70,38 @@ emp: EmployersDto= {
   description: ""
 }
 
+war: WareDto= {
+  id:1,
+  name:"",
+  image: "",
+  description: "",
+  price:123,
+  categoryName:""
+
+}
+
+    categories: any;
+
   AddEmpPath(){
-    this.path = "emp"
+    this.path = "emp";
+   
   }
+  getCategories(){
+    this.shopService.getCategory().subscribe((res: ApiCollectionResponse) => {
+      console.log(res)
+      if (res.isSuccessful) {       
+        this.categories = res.data;
+        
+        this.notifier.notify('ok', 'Ware Add');
+      }
+    else {
+        this.notifier.notify('error', 'Something goes wrong');
+      }
+    });
+
+  }
+
+    
 
   AddEmp(){
     this.formData.append('dto', JSON.stringify(this.emp));
@@ -85,6 +115,8 @@ emp: EmployersDto= {
         }
       });
   }
+
+
 
   deleteEmpPath(){
     this.path = "emp"
@@ -103,8 +135,29 @@ emp: EmployersDto= {
   }
 
 
+  AddWar(){
+    console.log(this.war);
+    this.shopService.addWare(this.war).subscribe((res: any) => {
+      if (res.isSuccessful) {       
+        console.log(res);
+        this.notifier.notify('ok', 'Wares Add');
+      }
+      else {
+        this.notifier.notify('error', 'Something goes wrong');
+      }
+    });
+}
+
+changeCategory(e: any){ 
+if(e.target!=null)
+  this.war.categoryName = e.target.value;
+  console.log(this.war);
+}
+
   AddWare(){
-    this.path = "ware"
+    this.path = "ware";
+    this.getCategories();
+    console.log(this.categories);
   }
 
   LogOut(){

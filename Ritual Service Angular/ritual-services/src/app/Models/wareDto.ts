@@ -4,4 +4,5 @@ export class WareDto{
     image!: string;
     price!: number;
     description!: string;
+    categoryName!:string;
 }
