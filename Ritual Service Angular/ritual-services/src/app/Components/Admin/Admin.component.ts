@@ -24,7 +24,11 @@ export class AdminComponent implements OnInit {
     private adminService: AdminService,
     private spinner: NgxSpinnerService,
     private router: Router,
-    private notifier:NotifierService) { }
+    private notifier:NotifierService) { 
+      this.userService.loginStatus.subscribe((res)=>{
+      this.ngOnInit();
+    });  
+  }
     
   ngOnInit(): void {
     this.empService.getEmployees().subscribe((res: any) => {
@@ -104,6 +108,7 @@ emp: EmployersDto= {
   }
 
   LogOut(){
+    this.userService.loginStatus.emit(false);
     this.userService.LogOut();    
     this.router.navigate(['/account/login']); 
   }
