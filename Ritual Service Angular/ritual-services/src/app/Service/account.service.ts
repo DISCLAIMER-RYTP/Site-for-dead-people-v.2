@@ -12,6 +12,7 @@ export class AccountService {
 
   headers: HttpHeaders = new HttpHeaders();
   loginStatus = new EventEmitter<boolean>();
+  photoStatus = new EventEmitter<boolean>();
   
   constructor(private http: HttpClient) { }
   register(form: FormData): Observable<ApiResponse> {
@@ -46,7 +47,6 @@ export class AccountService {
       const jwtData = token.split('.')[1];
       const decodedJwtJsonData = window.atob(jwtData);
       const decodedJwtData = JSON.parse(decodedJwtJsonData);
-      console.log(decodedJwtData.roles[0])
       if (decodedJwtData.roles == "Admin") {
         return true;
       }
@@ -65,8 +65,14 @@ export class AccountService {
     return this.http.post<ApiResponse>('https://localhost:44339/api/image/UploadImage/'+id, file, {headers: this.headers})
   }
 
+  UploadPhotoEmp(id: string, file: FormData):  Observable<ApiResponse> {
+    this.headers.append('Content-Type', 'multipart/form-data');
+    return this.http.post<ApiResponse>('https://localhost:44339/api/image/UploadImageEmp/'+id, file, {headers: this.headers})
+  }
+
   LogOut(){
-    localStorage.removeItem("Token");
+    localStorage.removeItem("token");
+    localStorage.removeItem("id");
     localStorage.removeItem("Id");
     this.loginStatus.emit(false);
   }

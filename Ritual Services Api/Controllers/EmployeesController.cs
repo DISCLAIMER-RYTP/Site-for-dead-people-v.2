@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using Ritual_Services_Api.Helpers;
 using Ritual_Services_Api.Models.Dto;
 using Ritual_Services_Api.Models.Dto.ResultDto;
 using Ritual_Services_Api.Models.Entities;
 using Ritual_Services_Api.Models.Entities.Identity;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,10 +23,13 @@ namespace Ritual_Services_Api.Controllers
     public class EmployeesController : ControllerBase
     {
         private readonly ApplicationContext _context;
+        private readonly IWebHostEnvironment _appEnvironment;
 
-        public EmployeesController(ApplicationContext context)
+        public EmployeesController(ApplicationContext context,
+                IWebHostEnvironment appEnvironment)
         {
             _context = context;
+            _appEnvironment = appEnvironment;
         }
 
         [HttpGet]
@@ -79,20 +88,68 @@ namespace Ritual_Services_Api.Controllers
 
         [HttpPost]
         [Route("Add")]
-        public ResultDto AddEmployees([FromBody]EmployeesDto dto)
+        public ResultDto AddEmployees([FromForm(Name = "dto")] string args, [FromForm] IFormFile file)
         {
+            var json = JObject.Parse(args);
+            EmployeesDto model = new EmployeesDto
+            {
+                FullName = json.SelectToken("fullName").Value<string>(),
+                Position = json.SelectToken("position").Value<string>(),
+                Phone = json.SelectToken("phone").Value<string>(),
+                Description = json.SelectToken("description").Value<string>()
+            };
+
             try
             {
-                if(dto!=null)
-                {
+                    string fileName = Guid.NewGuid().ToString() + ".jpg";
+                    string path = _appEnvironment.WebRootPath + @"\Images";
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    path = path + @"\" + fileName;
+                    if (file == null)
+                        return new ResultDto
+                        {
+                            IsSuccessful = false,
+                            Message = "Error"
+                        };
+                    if (file.Length == 0)
+                        return new ResultDto
+                        {
+                            IsSuccessful = false,
+                            Message = "Empty"
+                        };
+                    try
+                    {
+                        using (Bitmap bmp = new Bitmap(file.OpenReadStream()))
+                        {
+                            var saveImage = ImageWorker.CreateImage(bmp, 200, 125);
+                            if (saveImage != null)
+                            {
+                                saveImage.Save(path, ImageFormat.Jpeg);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        return new ResultDto
+                        {
+                            IsSuccessful = false,
+                            Message = ex.Message
+                        };
+                    }
                     Employees newEmp = new Employees()
                     {
-                        FullName = dto.FullName,
-                        Position = dto.Position,
-                        Phone = dto.Phone,
-                        Image = dto.Image,
-                        Description = dto.Description
+                        FullName = model.FullName,
+                        Position = model.Position,
+                        Phone = model.Phone,
+                        Image = fileName,
+                        Description = model.Description
                     };
+
+
+
                     _context.Employees.Add(newEmp);
                     _context.SaveChanges();
                     return new ResultDto
@@ -100,16 +157,6 @@ namespace Ritual_Services_Api.Controllers
                         IsSuccessful = true,
                         Message = "Sucessfuly add"
                     };
-
-                }
-                else
-                {
-                    return new ResultDto
-                    {
-                        IsSuccessful = false,
-                        Message = "Model is null"
-                    };
-                }
             }
             catch (Exception)
             {

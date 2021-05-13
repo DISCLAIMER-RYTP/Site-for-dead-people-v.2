@@ -70,7 +70,8 @@ emp: EmployersDto= {
   }
 
   AddEmp(){
-      this.empService.addEmployees(this.emp).subscribe((res: any) => {
+    this.formData.append('dto', JSON.stringify(this.emp));
+      this.empService.addEmployees(this.formData).subscribe((res: any) => {
         if (res.isSuccessful) {       
           console.log(res);
           this.notifier.notify('ok', 'Employer Add');
@@ -89,7 +90,7 @@ emp: EmployersDto= {
       this.empService.deleteEmployees(id).subscribe((res: any) => {
         if (res.isSuccessful) {       
           console.log(res);
-          this.notifier.notify('ok', 'Employer Add');
+          this.notifier.notify('ok', 'Employer Deleted');
         }
         else {
           this.notifier.notify('error', 'Something goes wrong');
@@ -136,11 +137,11 @@ emp: EmployersDto= {
         console.log(e.target.files);
         this.imgSrc = URL.createObjectURL(e.target.files[0]);
       }
-      this.userService.UploadPhoto(this.emp.id.toString(), this.formData).subscribe((res: ApiResponse) => {
-        if (res.isSuccessful) {
+      // this.userService.UploadPhoto(this.EditDog.id.toString(), this.formData).subscribe((res: ApiResponse) => {
+      //   if (res.isSuccessful) {
 
-        }
-      });
+      //   }
+      // });
     }
   }
 }

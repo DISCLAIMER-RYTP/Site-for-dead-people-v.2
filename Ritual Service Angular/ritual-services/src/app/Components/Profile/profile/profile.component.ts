@@ -18,7 +18,11 @@ export class ProfileComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private notifier:NotifierService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute) { 
+      this.userService.photoStatus.subscribe((res)=>{
+        this.ngOnInit();
+      });
+    }
 
     formData: FormData = new FormData();
     part: string = 'edit';
@@ -56,17 +60,16 @@ export class ProfileComponent implements OnInit {
     }
 
     uploadPhoto(e: any) {
-      if (e.target!= null) {
+      if (e.target != null) {
         if (e.target.files && e.target.files.item(0)) {
           this.formData.append('file', e.target.files.item(0) as File);
-          console.log(e.target.files);
-          this.imgSrc = URL.createObjectURL(e.target.files[0]);
+          this.userService.UploadPhoto(this.id, this.formData).subscribe((res: ApiResponse) => {
+            if (res.isSuccessful) {
+              this.formData = new FormData();
+              this.userService.photoStatus.emit(true);
+            }
+          });
         }
-        this.userService.UploadPhoto(this.prop.id, this.formData).subscribe((res: ApiResponse) => {
-          if (res.isSuccessful) {
-  
-          }
-        });
       }
     }
 }

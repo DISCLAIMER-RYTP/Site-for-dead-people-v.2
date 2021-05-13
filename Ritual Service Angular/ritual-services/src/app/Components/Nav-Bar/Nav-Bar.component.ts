@@ -14,7 +14,10 @@ export class NavBarComponent implements OnInit {
   
   email:string='';
   
-  constructor(private userService: AccountService, private router: Router) {    
+  constructor(private userService: AccountService, private router: Router) {   
+    this.userService.loginStatus.subscribe((res)=>{
+      this.ngOnInit();
+    }); 
     this.IsLoggedIn = false; 
     this.IsAdmin = false;
   }
@@ -24,6 +27,7 @@ export class NavBarComponent implements OnInit {
       this.IsAdmin = this.userService.isAdmin();
       this.userService.getUser(id).subscribe((res: any) => {
         if (res.isSuccessful) {
+          this.userService.loginStatus.emit(true);
           this.email = res.data.email
           this.IsLoggedIn = true
         }        
@@ -31,9 +35,8 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  
-
   LogOut(){
+    this.userService.loginStatus.emit(false);
     this.userService.LogOut();    
     this.router.navigate(['/account/login']); 
   }
